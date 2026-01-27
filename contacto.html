@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto e Inscripción | PREUFUNDEL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        .page-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), url('img/admissions_office_hero_1769114867907.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            position: relative;
+        }
+
+        .step-num {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--color-yellow);
+            color: black;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--color-bg-dark);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <div id="menu-container"></div>
+    <script src="js/load-menu.js"></script>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h4 class="text-cyan">ADMISIÓN 2026</h4>
+            <h1 style="font-size: 4rem; color: white;">INSCRIPCIONES <span class="text-yellow">ABIERTAS</span></h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: 20px auto;">Asegura tu cupo hoy mismo. Proceso 100%
+                transparente y ágil.</p>
+        </div>
+    </header>
+
+    <!-- 1. Proceso de Admisión -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">TU CAMINO A PREUFUNDEL</h2>
+            <div class="grid-2" style="grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;">
+                <!-- Step 1 -->
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">REGISTRO</h3>
+                    <p style="font-size: 0.9rem; color: #cbd5e1;">Llena el formulario con tus datos personales y carrera
+                        de interés.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">ENTREVISTA</h3>
+                    <p style="font-size: 0.9rem; color: #cbd5e1;">Breve reunión con coordinación académica para definir
+                        tu plan ideal.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">MATRÍCULA</h3>
+                    <p style="font-size: 0.9rem; color: #cbd5e1;">Realiza el pago vía transferencia, depósito o tarjeta
+                        de crédito.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h3 style="margin-top: 10px; margin-bottom: 10px;">ACCESO</h3>
+                    <p style="font-size: 0.9rem; color: #cbd5e1;">Recibe tus credenciales de plataforma y kit de
+                        bienvenida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Form & Locations -->
+    <section class="section-light">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2 style="color: #002060; margin-bottom: 30px;">VISÍTANOS</h2>
+                    <div class="card-white" style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 15px; margin-bottom: 10px;">
+                            <ion-icon name="business"
+                                style="font-size: 1.5rem; color: var(--color-brand-blue);"></ion-icon>
+                            <h3 style="font-size: 1.2rem;">SEDE NORTE (Matriz)</h3>
+                        </div>
+                        <p>Av. Principal y Calle 1, Edificio Fundel, Piso 3.</p>
+                        <p style="color: #64748b; font-size: 0.9rem;">(Frente al Centro Comercial)</p>
+                    </div>
+                    <div class="card-white" style="margin-bottom: 20px;">
+                        <div style="display: flex; gap: 15px; margin-bottom: 10px;">
+                            <ion-icon name="leaf" style="font-size: 1.5rem; color: var(--color-brand-blue);"></ion-icon>
+                            <h3 style="font-size: 1.2rem;">SEDE VALLES</h3>
+                        </div>
+                        <p>Av. Interoceánica, Plaza Moderna, Local 12.</p>
+                        <p style="color: #64748b; font-size: 0.9rem;">(Sector Cumbayá)</p>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <h4 style="color: #002060;">CONTACTO DIRECTO</h4>
+                        <p style="font-size: 1.2rem; font-weight: 700;">☎ 099 123 4567</p>
+                        <p>✉ admisiones@preufundel.com</p>
+                    </div>
+                </div>
+                <div>
+                    <form
+                        style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                        <h3 style="color: #002060; margin-bottom: 20px;">SOLICITAR CUPO</h3>
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-weight: 700; font-size: 0.9rem;">Nombre del Estudiante</label>
+                            <input type="text"
+                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-weight: 700; font-size: 0.9rem;">Celular / WhatsApp</label>
+                            <input type="tel"
+                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="font-weight: 700; font-size: 0.9rem;">Programa de Interés</label>
+                            <select
+                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px;">
+                                <option>Plan Regular (Sierra)</option>
+                                <option>Plan Intensivo (Sierra)</option>
+                                <option>Ciclo Costa</option>
+                                <option>Virtual Nocturno</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label style="font-weight: 700; font-size: 0.9rem;">Mensaje Adicional</label>
+                            <textarea
+                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px; height: 100px;"></textarea>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%;"
+                            onclick="event.preventDefault(); alert('Gracias. Un asesor te contactará en breve.');">ENVIAR
+                            SOLICITUD</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FAQ -->
+    <section class="section-dark" style="background: #001540;">
+        <div class="container" style="max-width: 800px;">
+            <h2 style="text-align: center; margin-bottom: 40px;">PREGUNTAS FRECUENTES</h2>
+            <div class="card-glass" style="margin-bottom: 10px; cursor: pointer;"
+                onclick="this.querySelector('p').style.display = 'block'">
+                <h4 style="display: flex; justify-content: space-between;">¿Cuáles son las formas de pago? <ion-icon
+                        name="chevron-down"></ion-icon></h4>
+                <p style="margin-top: 10px; display: none; color: #cbd5e1;">Aceptamos efectivo, transferencia bancaria y
+                    tarjeta de crédito (diferido hasta 12 meses sin intereses).</p>
+            </div>
+            <div class="card-glass" style="margin-bottom: 10px; cursor: pointer;"
+                onclick="this.querySelector('p').style.display = 'block'">
+                <h4 style="display: flex; justify-content: space-between;">¿Hay descuentos por grupos? <ion-icon
+                        name="chevron-down"></ion-icon></h4>
+                <p style="margin-top: 10px; display: none; color: #cbd5e1;">Sí, si te inscribes con 2 o más amigos,
+                    reciben un 10% de descuento cada uno.</p>
+            </div>
+            <div class="card-glass" style="margin-bottom: 10px; cursor: pointer;"
+                onclick="this.querySelector('p').style.display = 'block'">
+                <h4 style="display: flex; justify-content: space-between;">¿Qué pasa si no ingreso? <ion-icon
+                        name="chevron-down"></ion-icon></h4>
+                <p style="margin-top: 10px; display: none; color: #cbd5e1;">Activamos nuestra Garantía PREUFUNDEL: te
+                    capacitamos gratis para el siguiente periodo (aplica condiciones de asistencia).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: black; padding: 30px 0; text-align: center; color: #666; font-size: 0.8rem;">
+        <p>&copy; 2026 PREUFUNDEL | Potenciado por FUNDEL</p>
+    </footer>
+
+
+</body>
+
+</html>
