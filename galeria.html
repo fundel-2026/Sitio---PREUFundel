@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería | PREUFUNDEL</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        /* Page Specific Styles */
+        .page-hero {
+            height: 50vh;
+            background: linear-gradient(rgba(0, 32, 96, 0.8), rgba(2, 6, 23, 0.9)), url('img/fundel_building_modern.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-caption {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .gallery-location {
+            color: var(--color-cyan);
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* Masonry-like adjustments for larger screens */
+        @media (min-width: 1024px) {
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 2;
+                height: 620px;
+                /* 300*2 + 20 gap */
+            }
+
+            .gallery-item.wide {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <div id="menu-container"></div>
+    <script src="js/load-menu.js"></script>
+
+    <!-- Page Hero -->
+    <header class="page-hero">
+        <div class="container">
+            <h4 style="color: #00F0FF; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem;">NUESTRA EXPERIENCIA
+            </h4>
+            <h1 style="font-size: clamp(2.5rem, 8vw, 4.5rem); color: white; font-weight: 900;">GALERÍA <span
+                    style="color: #FFD500;">PREUFUNDEL</span>
+            </h1>
+            <p style="color: white; max-width: 600px; margin: 20px auto; font-size: 1.1rem;">
+                Instalaciones de primer nivel y momentos inolvidables de nuestra comunidad académica.
+            </p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="section-light" style="background: #f8fafc;">
+        <div class="container">
+            <h2 style="text-align: center; color: #002060; margin-bottom: 50px; font-size: 2.5rem;">INSTALACIONES Y VIDA
+                ESTUDIANTIL</h2>
+
+            <div class="gallery-grid">
+                <!-- Large Featured Item -->
+                <div class="gallery-item large">
+                    <img src="img/fundel_building_modern.png" alt="Edificio Principal">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Campus Principal</h3>
+                        <p class="gallery-location"><ion-icon name="location"></ion-icon> Ambato</p>
+                    </div>
+                </div>
+
+                <!-- Regular Items -->
+                <div class="gallery-item">
+                    <img src="img/modern_tech_learning_1769103823957.png" alt="Tecnología">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Aulas Tecnológicas</h3>
+                        <p class="gallery-location">Innovación Educativa</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/students_discussing_1769103553503.png" alt="Estudiantes">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Comunidad Estudiantil</h3>
+                        <p class="gallery-location">Trabajo en Equipo</p>
+                    </div>
+                </div>
+
+                <!-- Wide Item -->
+                <div class="gallery-item wide">
+                    <img src="img/hero_classroom_focus_1769103514510.png" alt="Clase">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Excelencia Académica</h3>
+                        <p class="gallery-location">Enfoque en Resultados</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/ambato_sede_1.png" alt="Sede Ambato 1">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Ambato 1</h3>
+                        <p class="gallery-location">Vista Panorámica</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/latacunga_sede_1.png" alt="Sede Latacunga 1">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Latacunga</h3>
+                        <p class="gallery-location">Cotopaxi</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/riobamba_sede.png" alt="Sede Riobamba">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Riobamba</h3>
+                        <p class="gallery-location">Chimborazo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/puyo_sede.png" alt="Sede Puyo">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Puyo</h3>
+                        <p class="gallery-location">Pastaza</p>
+                    </div>
+                </div>
+
+                <!-- More Student Life -->
+                <div class="gallery-item wide">
+                    <img src="img/happy_student_success_1769103805116.png" alt="Éxito Estudiantil">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">¡Logramos el Cupo!</h3>
+                        <p class="gallery-location">Resultados Reales</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/methodology_planning_1769103534612.png" alt="Planificación">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Planificación Estratégica</h3>
+                        <p class="gallery-location">Metodología RUGE</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/teacher_profile_1_1769109258496.png" alt="Docentes">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Docentes Expertos</h3>
+                        <p class="gallery-location">Acompañamiento Permanente</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <h3 style="color: #002060; margin-bottom: 20px;">¿Te gustaría conocer nuestras instalaciones en persona?
+                </h3>
+                <a href="contacto.html" class="btn btn-primary">AGENDAR VISITA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer dinámico -->
+    <script src="js/load-footer.js"></script>
+
+</body>
+
+</html>
