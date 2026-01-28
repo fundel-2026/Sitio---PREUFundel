@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
             <a href="index.html"><img src="logo-brand.png" style="height: 40px; margin-right: 20px;"></a>
             
-            <button class="hamburger" id="hamburger-btn" style="background: none; border: none; font-size: 2rem; color: white; cursor: pointer; display: none;">
+            <button class="hamburger" id="hamburger-btn">
                 <ion-icon name="menu-outline"></ion-icon>
             </button>
 
