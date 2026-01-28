@@ -9,7 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="container"
             style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
             <a href="index.html"><img src="logo-brand.png" style="height: 40px; margin-right: 20px;"></a>
-            <div class="nav-links">
+            
+            <button class="hamburger" id="hamburger-btn" style="background: none; border: none; font-size: 2rem; color: white; cursor: pointer; display: none;">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <div class="nav-links" id="nav-links">
                 <a href="index.html" class="${currentPath === 'index.html' ? 'active' : ''}" ${currentPath === 'index.html' ? 'style="color: var(--color-cyan);"' : ''}>Inicio</a>
                 <a href="institucion.html" class="${currentPath === 'institucion.html' ? 'active' : ''}" ${currentPath === 'institucion.html' ? 'style="color: var(--color-cyan);"' : ''}>Institución</a>
                 <a href="metodologia.html" class="${currentPath === 'metodologia.html' ? 'active' : ''}" ${currentPath === 'metodologia.html' ? 'style="color: var(--color-cyan);"' : ''}>Metodología</a>
@@ -24,4 +29,28 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     navbarRoot.innerHTML = navHTML;
+
+    // Mobile Menu Logic
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (hamburgerBtn && navLinks) {
+        hamburgerBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = hamburgerBtn.querySelector('ion-icon');
+            if (navLinks.classList.contains('active')) {
+                icon.setAttribute('name', 'close-outline');
+            } else {
+                icon.setAttribute('name', 'menu-outline');
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburgerBtn.querySelector('ion-icon').setAttribute('name', 'menu-outline');
+            });
+        });
+    }
 });
