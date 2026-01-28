@@ -898,4 +898,76 @@ select:focus {
     height: 70px;
     font-size: 1.2rem;
   }
+}/* Footer Styles Override for Social Icons */
+.social-icon:hover {
+    color: var(--color-cyan) !important;
+    transform: translateY(-3px);
+}
+/* University Carousel Styles */
+.university-carousel-container {
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.university-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    height: 80px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transition: transform 0.3s;
+}
+
+.university-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(1.5);
+    /* Make logos subtle/grey initially */
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.university-item:hover img {
+    filter: grayscale(0%) brightness(1);
+    /* Full color on hover */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scroll-universities {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Scrolls half because we duplicated items */
+}
+/* Premium Styled Logo Placeholders */
+.uni-card {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    height: 80px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.uni-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
