@@ -38,8 +38,10 @@ function cargarMenu() {
         const navLinks = document.getElementById('nav-links');
 
         if (hamburgerBtn && navLinks) {
-            hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent immediate closing if attached to document
                 navLinks.classList.toggle('active');
+
                 const icon = hamburgerBtn.querySelector('ion-icon');
                 if (navLinks.classList.contains('active')) {
                     icon.setAttribute('name', 'close-outline');
@@ -54,6 +56,16 @@ function cargarMenu() {
                     navLinks.classList.remove('active');
                     hamburgerBtn.querySelector('ion-icon').setAttribute('name', 'menu-outline');
                 });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (navLinks.classList.contains('active') &&
+                    !navLinks.contains(e.target) &&
+                    !hamburgerBtn.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    hamburgerBtn.querySelector('ion-icon').setAttribute('name', 'menu-outline');
+                }
             });
         }
     }
