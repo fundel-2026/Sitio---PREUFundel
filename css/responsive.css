@@ -1,0 +1,292 @@
+/* 
+  PREUFUNDEL - Responsive Media Queries
+  Agregado para asegurar compatibilidad móvil total
+*/
+
+/* ============================================
+   MOBILE FIRST - Tablets y Móviles
+   ============================================ */
+
+/* Tablets y pantallas pequeñas */
+@media (max-width: 1024px) {
+    :root {
+        --container-max: 100%;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    /* Grids responsive */
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    /* Typography mobile */
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2.2rem) !important;
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 5vw, 1.5rem) !important;
+    }
+
+    p {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    /* Navigation móvil */
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+
+    /* Botones móvil */
+    .btn,
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 14px 20px !important;
+        font-size: 1rem !important;
+    }
+
+    /* Cards responsive */
+    .card-white,
+    .card-glass {
+        padding: 25px !important;
+    }
+
+    /* Trust bar mobile */
+    .trust-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .trust-item {
+        width: 100%;
+    }
+
+    /* Hero actions stacked */
+    .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .hero-actions a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Galería responsive */
+    .gallery-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .gallery-item,
+    .gallery-item.large,
+    .gallery-item.wide {
+        height: 250px !important;
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    /* RUGE Steps mobile */
+    .ruge-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .step-number {
+        margin: 0 auto;
+    }
+
+    /* Formularios móvil */
+    form {
+        padding: 25px !important;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px !important;
+        /* Evita zoom en iOS */
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 30px 0;
+    }
+
+    /* Typography extra small */
+    h1 {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    h3 {
+        font-size: 1.2rem !important;
+    }
+
+    p {
+        font-size: 0.95rem !important;
+    }
+
+    /* Badges y labels pequeños */
+    .admission-badge,
+    .text-cyan,
+    .text-yellow {
+        font-size: 0.8rem !important;
+    }
+
+    /* Iconos más pequeños */
+    ion-icon {
+        font-size: 1.5rem !important;
+    }
+
+    /* Cards extra compactas */
+    .card-white,
+    .card-glass {
+        padding: 20px !important;
+    }
+
+    /* Botones más compactos */
+    .btn,
+    .btn-primary {
+        padding: 12px 16px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ============================================
+   DESKTOP - Optimizaciones
+   ============================================ */
+
+/* Desktop grande */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    section {
+        padding: 120px 0;
+    }
+
+    h1 {
+        font-size: 4.5rem !important;
+    }
+
+    h2 {
+        font-size: 3rem !important;
+    }
+}
+
+/* ============================================
+   UTILIDADES RESPONSIVE
+   ============================================ */
+
+/* Ocultar en móvil */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Ocultar en desktop */
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Stack en móvil */
+@media (max-width: 768px) {
+    .stack-mobile {
+        flex-direction: column !important;
+    }
+
+    .stack-mobile>* {
+        width: 100% !important;
+    }
+}
+
+/* Overflow seguro */
+* {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* WhatsApp Float responsive */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px !important;
+        right: 15px !important;
+        width: 55px !important;
+        height: 55px !important;
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+
+    footer .grid-2,
+    footer .grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    footer {
+        padding: 40px 0 !important;
+    }
+}

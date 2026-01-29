@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programas Académicos | PREUFUNDEL</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Programas Preuniversitarios 2026 Ecuador | Ciclos SENESCYT PREUFUNDEL</title>
+    <meta name="description"
+        content="Programas preuniversitarios 2026 para ciclo Sierra y Costa. Plan Regular, Intensivo y Virtual. ÚLTIMAS PLAZAS DISPONIBLES. Preparación completa para exámenes SENESCYT con garantía de resultados.">
+    <meta name="keywords"
+        content="ciclos preuniversitarios 2026, programas preparación SENESCYT, curso intensivo ingreso universidad, preuniversitario virtual Ecuador, plan regular preuniversitario">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <style>
         .page-hero {
@@ -31,18 +38,23 @@
     <!-- Page Hero -->
     <header class="page-hero">
         <div class="container">
-            <h4 class="text-cyan">OFERTA ACADÉMICA</h4>
-            <h1 style="font-size: clamp(2rem, 8vw, 4rem); color: white;">NUESTROS <span class="text-yellow"
-                    style="display: block;">PROGRAMAS</span></h1>
-            <p style="color: #cbd5e1; max-width: 600px; margin: 20px auto;">Elige el plan que se adapte a tu ritmo y
-                metas. <br>Ciclos Sierra y Costa disponibles.</p>
+            <h4 class="text-cyan" style="color: #FFD500;">🔥 PLAZAS LIMITADAS 2026</h4>
+            <h1 style="font-size: clamp(2rem, 8vw, 4rem); color: white;">ENCUENTRA TU <span class="text-yellow"
+                    style="display: block;">PROGRAMA IDEAL</span></h1>
+            <p style="color: #e2e8f0; max-width: 650px; margin: 20px auto; font-size: 1.1rem;"><strong>Elige el plan que
+                    te llevará a la universidad.</strong> Regular, Intensivo o Virtual - todos con la metodología RUGE y
+                <span style="color: #FFD500; font-weight: 700;">garantía de resultados.</span> <br>Ciclos Sierra y Costa
+                2026 abiertos.
+            </p>
         </div>
     </header>
 
     <!-- 1. Ciclos Info -->
     <section class="section-light">
         <div class="container" style="text-align: center;">
-            <h2 style="color: #002060; margin-bottom: 40px;">CICLOS DE ADMISIÓN</h2>
+            <h2 style="color: #002060; margin-bottom: 15px; font-size: 2.2rem;">Ciclos de Admisión 2026</h2>
+            <p style="color: #334155; max-width: 700px; margin: 0 auto 40px; font-size: 1.05rem;">Arranca en el momento
+                perfecto según tu región. <strong style="color: #FF4444;">¡CUPOS AGOTÁNDOSE RÁPIDO!</strong></p>
             <div class="grid-2">
                 <div class="card-white" style="border-top: 5px solid #002060;">
                     <h3 style="margin-bottom: 15px;">CICLO SIERRA / AMAZONÍA</h3>
@@ -160,6 +172,197 @@
                             style="width: 100%; margin-top: 20px; text-align: center;">CONSULTAR DISPONIBILIDAD</a>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Galería de Estudiantes -->
+    <section class="section-light" style="background: #f8fafc;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <h4 style="color: #00F0FF; font-weight: 700; letter-spacing: 2px; font-size: 0.9rem;">NUESTROS
+                    ESTUDIANTES EN ACCIÓN</h4>
+                <h2 style="color: #002060; font-size: 2.5rem; margin-top: 10px;">Tú Puedes Ser el Próximo en <span
+                        style="color: #FFD500;">Lograrlo</span></h2>
+                <p style="color: #64748b; max-width: 700px; margin: 20px auto;">Mira las instalaciones donde forjarás tu
+                    futuro y los momentos que compartirás con tus compañeros</p>
+            </div>
+
+            <style>
+                .gallery-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 20px;
+                    padding: 20px 0;
+                }
+
+                .gallery-item {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 15px;
+                    height: 300px;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    cursor: pointer;
+                }
+
+                .gallery-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.5s ease;
+                }
+
+                .gallery-item:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+                    z-index: 2;
+                }
+
+                .gallery-item:hover img {
+                    transform: scale(1.1);
+                }
+
+                .gallery-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+                    padding: 20px;
+                    transform: translateY(100%);
+                    transition: transform 0.3s ease;
+                }
+
+                .gallery-item:hover .gallery-overlay {
+                    transform: translateY(0);
+                }
+
+                .gallery-caption {
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    margin: 0;
+                }
+
+                .gallery-location {
+                    color: var(--color-cyan);
+                    font-size: 0.85rem;
+                    margin-top: 5px;
+                }
+
+                @media (min-width: 1024px) {
+                    .gallery-item.large {
+                        grid-column: span 2;
+                        grid-row: span 2;
+                        height: 620px;
+                    }
+
+                    .gallery-item.wide {
+                        grid-column: span 2;
+                    }
+                }
+            </style>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="img/fundel_building_modern.png" alt="Edificio Principal">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Campus Principal</h3>
+                        <p class="gallery-location"><ion-icon name="location"></ion-icon> Ambato</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/modern_tech_learning_1769103823957.png" alt="Tecnología">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Aulas Tecnológicas</h3>
+                        <p class="gallery-location">Innovación Educativa</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/students_discussing_1769103553503.png" alt="Estudiantes">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Comunidad Estudiantil</h3>
+                        <p class="gallery-location">Trabajo en Equipo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item wide">
+                    <img src="img/hero_classroom_focus_1769103514510.png" alt="Clase">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Excelencia Académica</h3>
+                        <p class="gallery-location">Enfoque en Resultados</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/ambato_sede_1.png" alt="Sede Ambato 1">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Ambato 1</h3>
+                        <p class="gallery-location">Vista Panorámica</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/latacunga_sede_1.png" alt="Sede Latacunga 1">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Latacunga</h3>
+                        <p class="gallery-location">Cotopaxi</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/riobamba_sede.png" alt="Sede Riobamba">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Riobamba</h3>
+                        <p class="gallery-location">Chimborazo</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/puyo_sede.png" alt="Sede Puyo">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Sede Puyo</h3>
+                        <p class="gallery-location">Pastaza</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item wide">
+                    <img src="img/happy_student_success_1769103805116.png" alt="Éxito Estudiantil">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">¡Logramos el Cupo!</h3>
+                        <p class="gallery-location">Resultados Reales</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/methodology_planning_1769103534612.png" alt="Planificación">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Planificación Estratégica</h3>
+                        <p class="gallery-location">Metodología RUGE</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="img/teacher_profile_1_1769109258496.png" alt="Docentes">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-caption">Docentes Expertos</h3>
+                        <p class="gallery-location">Acompañamiento Permanente</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px;">
+                <h3 style="color: #002060; margin-bottom: 20px; font-size: 1.8rem;">¿Listo para Comenzar Tu
+                    Transformación?</h3>
+                <p
+                    style="color: #64748b; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Agenda una visita y conoce personalmente las instalaciones donde alcanzarás tus metas</p>
+                <a href="contacto.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px;">AGENDAR
+                    VISITA GRATUITA</a>
             </div>
         </div>
     </section>

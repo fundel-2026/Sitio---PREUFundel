@@ -1,0 +1,481 @@
+/* ================================================
+   HERO ULTRA-PROFESIONAL - LEÓN PEQUEÑO + CARRUSEL
+   ================================================ */
+
+.hero-ultra {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #001F3D 0%, #003666 50%, #00508A 100%);
+    display: flex;
+    align-items: center;
+    padding: 140px 0 140px 0;
+    overflow: hidden;
+}
+
+/* ========== GRID LAYOUT ========== */
+.hero-ultra-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* ========== CONTENIDO IZQUIERDA ========== */
+.hero-content-left {
+    max-width: 600px;
+}
+
+/* Badge de Admisión */
+.admission-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 213, 0, 0.15);
+    border: 1px solid rgba(255, 213, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #FFD500;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+}
+
+.admission-badge svg {
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.15) rotate(180deg);
+    }
+}
+
+/* Título Principal */
+.hero-main-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    color: #FFFFFF;
+    margin: 0 0 20px 0;
+}
+
+.title-highlight {
+    display: block;
+    background: linear-gradient(135deg, #FFD500 0%, #FFA500 50%, #FFD500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    margin-top: 5px;
+}
+
+.title-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 180px;
+    height: 4px;
+    background: linear-gradient(90deg, #FFD500, transparent);
+    border-radius: 2px;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+    line-height: 1.5;
+    margin: 0 0 30px 0;
+}
+
+/* Features List */
+.hero-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+.hero-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hero-features svg {
+    flex-shrink: 0;
+    color: #00F0FF;
+    width: 22px;
+    height: 22px;
+}
+
+/* Acciones */
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-primary-hero,
+.btn-secondary-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary-hero {
+    background: linear-gradient(135deg, #FFD500, #FFA500);
+    color: #000000;
+    box-shadow: 0 8px 24px rgba(255, 213, 0, 0.35);
+}
+
+.btn-primary-hero:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(255, 213, 0, 0.5);
+}
+
+.btn-primary-hero svg {
+    transition: transform 0.3s;
+}
+
+.btn-primary-hero:hover svg {
+    transform: translateX(4px);
+}
+
+.btn-secondary-hero {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+}
+
+.btn-secondary-hero:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Trust Bar */
+.trust-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.trust-item {
+    text-align: left;
+}
+
+.trust-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #FFD500;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.trust-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* ========== VISUAL DERECHA ========== */
+.hero-visual-right {
+    position: relative;
+    height: 650px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+/* León Mascota - MÁS PEQUEÑO Y ARRIBA */
+.mascot-container {
+    position: relative;
+    z-index: 3;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.mascot-main {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.4));
+    animation: mascotFloat 6s ease-in-out infinite;
+}
+
+@keyframes mascotFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.mascot-main:hover {
+    animation: mascotWave 0.6s ease-in-out;
+}
+
+@keyframes mascotWave {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-6deg);
+    }
+
+    75% {
+        transform: rotate(6deg);
+    }
+}
+
+/* Galería Carrusel - 5 imágenes, muestra 3 rotando */
+.image-showcase {
+    position: absolute;
+    bottom: -130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    z-index: 2;
+}
+
+.showcase-card {
+    position: relative;
+    height: 140px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid rgba(0, 240, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    display: none;
+    transform: scale(0.95);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* JavaScript controlará cuáles son visibles */
+.showcase-card[style*="display: block"] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Imagen activa en el carrusel */
+.showcase-card.active {
+    border-color: rgba(0, 240, 255, 0.7);
+    box-shadow: 0 8px 25px rgba(0, 240, 255, 0.5);
+}
+
+.showcase-card:hover {
+    transform: translateY(-5px) scale(1.02) !important;
+    border-color: rgba(0, 240, 255, 0.9);
+    box-shadow: 0 12px 35px rgba(0, 240, 255, 0.6);
+}
+
+.showcase-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.showcase-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Badge - MÁS A LA IZQUIERDA */
+.floating-badge {
+    position: absolute;
+    top: 10px;
+    left: -110px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    z-index: 4;
+    animation: badgeFloat 4s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.badge-icon {
+    font-size: 1.8rem;
+}
+
+.badge-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.badge-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #001F3D;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.badge-subtitle {
+    font-size: 0.7rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+    .hero-ultra-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-content-left {
+        max-width: none;
+        text-align: center;
+    }
+
+    .hero-main-title {
+        font-size: 3.5rem;
+    }
+
+    .hero-features {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .trust-bar {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .hero-visual-right {
+        height: 600px;
+    }
+
+    .mascot-container {
+        max-width: 280px;
+    }
+
+    .image-showcase {
+        width: 100%;
+        max-width: 500px;
+        bottom: -100px;
+    }
+
+    .floating-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-main-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary-hero,
+    .btn-secondary-hero {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .trust-bar {
+        gap: 15px;
+    }
+
+    .trust-number {
+        font-size: 1.8rem;
+    }
+
+    .trust-label {
+        font-size: 0.75rem;
+    }
+
+    .mascot-container {
+        max-width: 240px;
+    }
+
+    .image-showcase {
+        gap: 8px;
+        bottom: -70px;
+    }
+
+    .showcase-card {
+        height: 100px;
+    }
+
+    .floating-badge {
+        padding: 10px 16px;
+        top: -30px;
+    }
+
+    .badge-title {
+        font-size: 0.8rem;
+    }
+}
