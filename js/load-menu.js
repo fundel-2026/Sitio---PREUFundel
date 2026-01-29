@@ -11,7 +11,7 @@ function cargarMenu() {
         <nav>
             <div class="container"
                 style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
-                <a href="index.html"><img src="logo-brand.png" style="height: 40px; margin-right: 20px;"></a>
+                <a href="index.html"><img src="img/logo-preufundel.png" style="height: 80px; margin-right: 20px;" alt="PREUFUNDEL Logo"></a>
                 
                 <button class="hamburger" id="hamburger-btn">
                     <ion-icon name="menu-outline"></ion-icon>
