@@ -1,0 +1,344 @@
+/* ================================================
+   TIPOGRAFÍA ESTANDARIZADA - PREUFUNDEL
+   Sistema unificado de tamaños de fuente
+   ================================================ */
+
+/* 
+   SISTEMA DE TAMAÑOS (IGUALADOS A INDEX.HTML):
+   - Títulos principales: 3.5rem - 4.5rem
+   - Títulos sección: 2.5rem - 3rem
+   - Subtítulos: 1.5rem - 2rem
+   - Texto normal: 1.1rem - 1.25rem
+   - Texto pequeño: 1rem
+*/
+
+/* ========== TIPOGRAFÍA BASE ========== */
+body {
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+}
+
+/* ========== TÍTULOS GLOBALES (TAMAÑOS GRANDES COMO INDEX) ========== */
+h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+h2 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.25rem !important;
+}
+
+h3 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+}
+
+h4 {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* ========== PÁRRAFOS Y TEXTO (MÁS GRANDES) ========== */
+p {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+    margin-bottom: 1.2rem !important;
+}
+
+/* Textos enfatizados mantienen el mismo tamaño */
+strong,
+b {
+    font-size: inherit !important;
+}
+
+/* ========== HERO SECTION ========== */
+.hero-main-title {
+    font-size: 4.5rem !important;
+    line-height: 1 !important;
+}
+
+.title-highlight {
+    font-size: inherit !important;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem !important;
+    line-height: 1.5 !important;
+}
+
+.hero-features li {
+    font-size: 1.15rem !important;
+}
+
+.hero-features li span {
+    font-size: inherit !important;
+}
+
+/* ========== PAGE HERO (OTRAS PÁGINAS) ========== */
+.page-hero h1 {
+    font-size: 4.5rem !important;
+    line-height: 1.1 !important;
+}
+
+.page-hero p {
+    font-size: 1.15rem !important;
+    line-height: 1.7 !important;
+}
+
+.page-hero span {
+    font-size: inherit !important;
+}
+
+/* ========== TRUST INDICATORS ========== */
+.trust-number {
+    font-size: 2.2rem !important;
+}
+
+.trust-label {
+    font-size: 1rem !important;
+}
+
+/* ========== BADGES Y ETIQUETAS ========== */
+.admission-badge {
+    font-size: 1rem !important;
+}
+
+.badge-title {
+    font-size: 1.1rem !important;
+}
+
+.badge-subtitle {
+    font-size: 0.95rem !important;
+}
+
+/* ========== BOTONES ========== */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-primary-hero,
+.btn-secondary-hero {
+    font-size: 1.05rem !important;
+}
+
+/* ========== NAVEGACIÓN ========== */
+.nav-links a {
+    font-size: 0.9rem !important;
+}
+
+/* ========== FORMULARIOS ========== */
+form label {
+    font-size: 1.05rem !important;
+}
+
+form input,
+form textarea,
+form select {
+    font-size: 1.05rem !important;
+}
+
+/* ========== CARDS ========== */
+.card-glass h3,
+.card-white h3 {
+    font-size: 1.8rem !important;
+}
+
+.card-glass p,
+.card-white p {
+    font-size: 1.15rem !important;
+}
+
+.card-glass h4,
+.card-white h4 {
+    font-size: 1.5rem !important;
+}
+
+/* ========== LISTAS ========== */
+ul li,
+ol li {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+}
+
+/* ========== SECCIONES DE CONTENIDO ========== */
+
+/* Títulos de sección */
+section h2 {
+    font-size: 2.5rem !important;
+}
+
+section h3 {
+    font-size: 1.8rem !important;
+}
+
+section h4 {
+    font-size: 1.5rem !important;
+}
+
+/* Textos descriptivos */
+section p {
+    font-size: 1.15rem !important;
+}
+
+/* ========== TESTIMONIOS ========== */
+.testimonio-nombre {
+    font-size: 1.25rem !important;
+}
+
+.testimonio-cargo {
+    font-size: 1.05rem !important;
+}
+
+.testimonio-texto {
+    font-size: 1.15rem !important;
+}
+
+/* ========== EQUIPO ========== */
+.team-member h4 {
+    font-size: 1.5rem !important;
+}
+
+.team-member p {
+    font-size: 1.1rem !important;
+}
+
+/* ========== PROCESO/TIMELINE/RUGE ========== */
+.ruge-step h4 {
+    font-size: 1.8rem !important;
+}
+
+.ruge-step p {
+    font-size: 1.15rem !important;
+}
+
+/* ========== FAQs ========== */
+.faq-question {
+    font-size: 1.2rem !important;
+}
+
+.faq-answer {
+    font-size: 1.1rem !important;
+}
+
+/* ========== STATS/NÚMEROS ========== */
+.stat-number {
+    font-size: 2.5rem !important;
+}
+
+.stat-label {
+    font-size: 1.05rem !important;
+}
+
+/* ========== FOOTER ========== */
+footer h4 {
+    font-size: 1.4rem !important;
+}
+
+footer p,
+footer li,
+footer a {
+    font-size: 1.05rem !important;
+}
+
+/* ========== ESTILOS INLINE OVERRIDE ========== */
+/* Forzar tamaños en elementos con estilos inline */
+[style*="font-size"] h1 {
+    font-size: 3.5rem !important;
+}
+
+[style*="font-size"] h2 {
+    font-size: 2.5rem !important;
+}
+
+[style*="font-size"] h3 {
+    font-size: 1.8rem !important;
+}
+
+[style*="font-size"] p {
+    font-size: 1.15rem !important;
+}
+
+/* ========== RESPONSIVE - MOBILE ========== */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px !important;
+    }
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    h4 {
+        font-size: 1.3rem !important;
+    }
+
+    p,
+    li {
+        font-size: 1.05rem !important;
+    }
+
+    .hero-main-title,
+    .page-hero h1 {
+        font-size: 2.8rem !important;
+    }
+
+    .hero-subtitle,
+    .page-hero p {
+        font-size: 1.1rem !important;
+    }
+
+    .trust-number,
+    .stat-number {
+        font-size: 1.8rem !important;
+    }
+
+    section h2 {
+        font-size: 2rem !important;
+    }
+
+    section h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .card-glass h3,
+    .card-white h3 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ========== RESPONSIVE - TABLET ========== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    h2 {
+        font-size: 2.25rem !important;
+    }
+
+    h3 {
+        font-size: 1.65rem !important;
+    }
+
+    .hero-main-title,
+    .page-hero h1 {
+        font-size: 3.5rem !important;
+    }
+
+    .hero-subtitle,
+    .page-hero p {
+        font-size: 1.2rem !important;
+    }
+}

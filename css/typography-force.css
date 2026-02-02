@@ -1,0 +1,222 @@
+/* ================================================
+   TIPOGRAFÍA FORZADA - PREUFUNDEL
+   Sobrescribe TODOS los estilos inline
+   ================================================ */
+
+/* ========== SOBRESCRIBIR ABSOLUTAMENTE TODO ========== */
+
+/* Títulos con máxima especificidad */
+html body h1,
+html body section h1,
+html body div h1,
+html body header h1,
+.page-hero h1,
+.section-light h1,
+.section-dark h1 {
+    font-size: 3.5rem !important;
+    line-height: 1.1 !important;
+}
+
+html body h2,
+html body section h2,
+html body div h2,
+.page-hero h2,
+.section-light h2,
+.section-dark h2 {
+    font-size: 2.5rem !important;
+    line-height: 1.2 !important;
+}
+
+html body h3,
+html body section h3,
+html body div h3,
+.card-white h3,
+.card-glass h3 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+}
+
+html body h4,
+html body section h4,
+html body div h4 {
+    font-size: 1.5rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Párrafos con máxima especificidad */
+html body p,
+html body section p,
+html body div p,
+.section-light p,
+.section-dark p,
+.card-white p,
+.card-glass p {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+}
+
+/* Listas */
+html body ul li,
+html body ol li,
+html body section ul li,
+html body section ol li {
+    font-size: 1.15rem !important;
+    line-height: 1.8 !important;
+}
+
+/* Spans dentro de párrafos también grandes */
+html body p span,
+html body div p span,
+html body section p span {
+    font-size: inherit !important;
+}
+
+/* Labels y inputs de formularios */
+html body form label,
+html body section form label {
+    font-size: 1.05rem !important;
+}
+
+html body form input,
+html body form textarea,
+html body form select {
+    font-size: 1.05rem !important;
+}
+
+/* Hero sections específicamente */
+.hero-ultra h1,
+.hero-ultra .hero-main-title {
+    font-size: 3rem !important;
+}
+
+.hero-ultra p,
+.hero-ultra .hero-subtitle {
+    font-size: 1.3rem !important;
+}
+
+.page-hero h1 {
+    font-size: 3rem !important;
+}
+
+.page-hero p {
+    font-size: 1.15rem !important;
+}
+
+/* Botones */
+html body .btn,
+html body button,
+html body a.btn {
+    font-size: 1.05rem !important;
+}
+
+/* Trust indicators */
+.trust-number,
+.stat-number {
+    font-size: 2.2rem !important;
+}
+
+.trust-label,
+.stat-label {
+    font-size: 1rem !important;
+}
+
+/* RUGE Steps */
+.ruge-step h4 {
+    font-size: 1.8rem !important;
+}
+
+.ruge-step p {
+    font-size: 1.15rem !important;
+}
+
+/* Team members */
+.team-member h4 {
+    font-size: 1.5rem !important;
+}
+
+.team-member p {
+    font-size: 1.1rem !important;
+}
+
+/* Badges */
+.admission-badge,
+.badge-title {
+    font-size: 1rem !important;
+}
+
+/* Footer */
+html body footer h4 {
+    font-size: 1.4rem !important;
+}
+
+html body footer p,
+html body footer li,
+html body footer a {
+    font-size: 1.05rem !important;
+}
+
+/* FAQs */
+.faq-question {
+    font-size: 1.2rem !important;
+}
+
+.faq-answer {
+    font-size: 1.1rem !important;
+}
+
+/* Testimonios */
+.testimonio-nombre {
+    font-size: 1.25rem !important;
+}
+
+.testimonio-texto {
+    font-size: 1.15rem !important;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+
+    html body h1,
+    .page-hero h1,
+    .hero-main-title {
+        font-size: 2.5rem !important;
+    }
+
+    html body h2,
+    .page-hero h2 {
+        font-size: 2rem !important;
+    }
+
+    html body h3 {
+        font-size: 1.5rem !important;
+    }
+
+    html body h4 {
+        font-size: 1.3rem !important;
+    }
+
+    html body p,
+    html body li {
+        font-size: 1.05rem !important;
+    }
+
+    .hero-ultra .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    html body h1,
+    .page-hero h1 {
+        font-size: 3rem !important;
+    }
+
+    html body h2 {
+        font-size: 2.25rem !important;
+    }
+
+    .hero-main-title {
+        font-size: 3.5rem !important;
+    }
+}

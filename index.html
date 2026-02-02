@@ -7,6 +7,7 @@
 
     <!-- SEO Meta Tags -->
     <title>Mejor Preuniversitario Ecuador 2026 | PREUFUNDEL - 95% Tasa de Ingreso Garantizada</title>
+    <link rel="icon" type="image/png" href="img/logo-preufundel.png">
     <meta name="description"
         content="¡Ingresa a la Universidad de tus Sueños! PREUFUNDEL es el mejor preuniversitario de Ecuador con 95% de tasa de aprobación. Preparación SENESCYT, metodología científica comprobada. ¡Últimas 15 plazas disponibles!">
     <meta name="keywords"
@@ -34,6 +35,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/hero-premium.css">
+    <link rel="stylesheet" href="css/typography-unified.css">
+    <link rel="stylesheet" href="css/typography-force.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script defer src="js/animations.js"></script>
     <script defer src="js/hero-carousel.js"></script>
@@ -56,6 +59,12 @@
         <div class="container">
             <div class="hero-ultra-grid">
                 <!-- COLUMNA IZQUIERDA: CONTENIDO -->
+                <!-- Aviones Decorativos de Fondo -->
+                <div class="hero-planes">
+                    <img src="img/avion_papel.png" class="paper-plane paper-plane-1" alt="Avión de papel 1">
+                    <img src="img/avion_papel.png" class="paper-plane paper-plane-2" alt="Avión de papel 2">
+                </div>
+
                 <div class="hero-content-left">
                     <!-- Badge -->
                     <div class="admission-badge">
@@ -140,11 +149,13 @@
                 <!-- COLUMNA DERECHA: VISUAL -->
                 <div class="hero-visual-right">
 
-                    <!-- León Mascota Principal - VIDEO ANIMADO -->
-                    <div class="mascot-container">
-                        <video src="img/saludo_leon_final.mp4" class="mascot-main" id="leon-fundel" autoplay loop muted
-                            playsinline preload="auto">
-                        </video>
+                    <!-- Badge Flotante (Moved Up) -->
+                    <div class="floating-badge">
+                        <div class="badge-icon">🏆</div>
+                        <div class="badge-content">
+                            <div class="badge-title">Mejor Preuniversitario</div>
+                            <div class="badge-subtitle">Ecuador 2025</div>
+                        </div>
                     </div>
 
                     <!-- Carrusel de 5 Imágenes -->
@@ -163,15 +174,6 @@
                         </div>
                         <div class="showcase-card">
                             <img src="img/hero_gallery_5.jpg" alt="Vida Estudiantil FUNDEL">
-                        </div>
-                    </div>
-
-                    <!-- Badge Flotante -->
-                    <div class="floating-badge">
-                        <div class="badge-icon">🏆</div>
-                        <div class="badge-content">
-                            <div class="badge-title">Mejor Preuniversitario</div>
-                            <div class="badge-subtitle">Ecuador 2025</div>
                         </div>
                     </div>
 
@@ -237,7 +239,20 @@
                         <div style="margin-bottom: 15px;">
                             <label
                                 style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">Nombre
-                                Completo</label>
+                                del Representante</label>
+                            <div style="position: relative;">
+                                <ion-icon name="people-outline"
+                                    style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
+                                <input type="text" placeholder="Ej: Juan Pérez" required
+                                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; transition: 0.3s;"
+                                    onfocus="this.style.borderColor='var(--color-brand-blue)'; this.style.background='white';">
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 15px;">
+                            <label
+                                style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">Nombre
+                                del Estudiante</label>
                             <div style="position: relative;">
                                 <ion-icon name="person-outline"
                                     style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
@@ -249,10 +264,9 @@
 
                         <div style="margin-bottom: 20px;">
                             <label
-                                style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">WhatsApp
-                                / Celular</label>
+                                style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">WhatsApp</label>
                             <div style="position: relative;">
-                                <ion-icon name="call-outline"
+                                <ion-icon name="logo-whatsapp"
                                     style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
                                 <input type="tel" placeholder="Ej: 0991234567" required
                                     style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; transition: 0.3s;"
@@ -294,7 +308,7 @@
 
                 <!-- Etapa 1: Registro Nacional -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 50px; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;">
                         <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Registro
                             Nacional</h3>
@@ -310,7 +324,7 @@
 
                 <!-- Etapa 2: Inscripción -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 50px; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;"></div>
                     <div
                         style="flex-shrink: 0; width: 70px; height: 70px; background: linear-gradient(135deg, #0066CC, #002060); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,102,204,0.4); position: relative; z-index: 1; border: 4px solid #020617;">
@@ -326,7 +340,7 @@
 
                 <!-- Etapa 3: Evaluación -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 50px; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;">
                         <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Evaluación
                         </h3>
@@ -342,7 +356,7 @@
 
                 <!-- Etapa 4: Postulación -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 50px; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;"></div>
                     <div
                         style="flex-shrink: 0; width: 70px; height: 70px; background: linear-gradient(135deg, #002060, #00CED1); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0,32,96,0.4); position: relative; z-index: 1; border: 4px solid #020617;">
@@ -358,7 +372,7 @@
 
                 <!-- Etapa 5: Asignación -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 50px; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;">
                         <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Asignación
                             de Cupo
@@ -376,7 +390,7 @@
 
                 <!-- Etapa 6: Aceptación -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 50px; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;"></div>
                     <div
                         style="flex-shrink: 0; width: 70px; height: 70px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(16,185,129,0.4); position: relative; z-index: 1; border: 4px solid #020617;">
@@ -393,7 +407,7 @@
 
                 <!-- Etapa 7: Matriculación -->
                 <div class="reveal"
-                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0; position: relative;">
+                    style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;">
                         <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">
                             Matriculación</h3>
