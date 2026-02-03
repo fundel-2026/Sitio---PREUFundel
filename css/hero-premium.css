@@ -622,7 +622,7 @@
 
 @media (max-width: 1100px) {
 
-    /* Keep visible but adjust */
+    /* Tablet adjustment */
     .hero-mascot {
         right: -100px;
         width: 300px;
@@ -631,26 +631,42 @@
 }
 
 @media (max-width: 992px) {
+    .hero-ultra {
+        padding: 80px 0 60px 0;
+        /* Reduced padding */
+        height: auto;
+        min-height: auto;
+    }
+
+    .hero-ultra-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hero-visual-right {
+        height: auto;
+        /* Allow form to determine height */
+        padding-top: 0;
+        margin-top: 30px;
+        /* Ensure mascot doesn't overflow horizontally causing scroll or cutoff */
+        overflow: visible;
+    }
+
     .hero-mascot {
         /* Mobile adaptation: Visible but smaller and positioned carefully */
         display: block;
-        right: -30px;
+        right: -20px;
         width: 180px;
-        /* Much smaller for mobile */
-        bottom: -20px;
+        bottom: -30px;
         z-index: 20;
-    }
-
-    .hero-ultra {
-        padding: 100px 0 60px 0;
-        /* Reduced padding */
     }
 }
 
 @media (max-width: 768px) {
     .hero-main-title {
-        font-size: 2.5rem;
-        /* Smaller title */
+        font-size: 2.2rem;
+        /* Even smaller title for mobile readability */
         line-height: 1.1;
     }
 
@@ -662,24 +678,23 @@
     .hero-actions {
         flex-direction: column;
         width: 100%;
-        gap: 10px;
+        gap: 12px;
     }
 
     .btn-primary-hero,
     .btn-secondary-hero {
         width: 100%;
         justify-content: center;
-        padding: 12px 20px;
+        padding: 14px 20px;
     }
 
     .trust-bar {
         grid-template-columns: repeat(3, 1fr);
-        /* Keep 3 cols but tight */
-        gap: 10px;
+        gap: 8px;
     }
 
     .trust-number {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .trust-label {
@@ -688,36 +703,36 @@
 
     /* Form adjustment */
     .hero-visual-right form {
-        padding: 25px !important;
+        padding: 20px !important;
+        width: 100%;
     }
 
     .hero-mascot {
-        width: 160px;
-        right: -20px;
-        bottom: -15px;
+        width: 150px;
+        right: -10px;
+        /* Pull inside to avoid cutoff */
+        bottom: -25px;
     }
 }
 
 @media (max-width: 480px) {
     .hero-main-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        /* Fit on small phones */
     }
 
     .trust-bar {
-        grid-template-columns: 1fr;
-        /* Stack trust items on very small screens? Or keep row? Row is usually better for stats */
-        gap: 15px;
-        text-align: center;
+        gap: 5px;
     }
 
-    .trust-item {
-        text-align: center;
+    .hero-visual-right {
+        width: 100%;
     }
 
     .hero-mascot {
-        /* On very small screens, maybe hide or put relative below */
-        width: 140px;
-        right: -10px;
-        bottom: -10px;
+        width: 130px;
+        right: -5px;
+        /* Fully integrated */
+        bottom: -20px;
     }
 }
