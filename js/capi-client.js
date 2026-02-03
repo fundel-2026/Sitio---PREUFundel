@@ -49,14 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 })
             }).catch(e => console.log('Background sync error', e));
 
-            // 4. Redirect to WhatsApp
+            // 4. Redirect to WhatsApp with Conversion Tracking
             const targetPhone = '593994304689'; // Provided in user request context
             const message = `Hola, me interesa inscribirme en PREUFUNDEL.\n\n*Mis Datos:*\nNombre Rep: ${representativeName}\nEstudiante: ${studentName}\nTeléfono: ${phone}\nInfo: ${programInfo}`;
             const whatsappUrl = `https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`;
 
             // Small delay to allow pixel to try firing (optional, but good practice)
             setTimeout(() => {
-                window.location.href = whatsappUrl;
+                if (typeof window.gtag_report_conversion === 'function') {
+                    window.gtag_report_conversion(whatsappUrl);
+                } else {
+                    window.location.href = whatsappUrl;
+                }
             }, 200);
         });
     });
