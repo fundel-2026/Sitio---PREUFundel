@@ -561,3 +561,73 @@
         font-size: 0.8rem;
     }
 }
+
+/* =========================================
+   MASCOTA LEÓN APOYADO EN FORMULARIO
+   ========================================= */
+/* =========================================
+   MASCOTA LEÓN APOYADO EN FORMULARIO
+   ========================================= */
+.hero-mascot {
+    position: absolute;
+    bottom: 20px;
+    right: -300px;
+    /* Closer starting point for large screens */
+    left: auto;
+    width: 660px;
+    height: auto;
+    z-index: 20;
+    filter: drop-shadow(10px 20px 40px rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+    animation: mascotBreath 4s ease-in-out infinite;
+}
+
+@keyframes mascotBreath {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 1700px) {
+    .hero-mascot {
+        right: -350px;
+        /* Move out as screen gets tighter */
+        width: 600px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .hero-mascot {
+        right: -300px;
+        /* Keep checking overlap */
+        width: 500px;
+        /* Shrink faster to avoid collision */
+        bottom: 10px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .hero-mascot {
+        right: -200px;
+        width: 400px;
+        bottom: 0px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero-mascot {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-mascot {
+        display: none;
+    }
+}
