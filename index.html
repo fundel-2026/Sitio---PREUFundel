@@ -7,7 +7,7 @@
 
     <!-- SEO Meta Tags -->
 
-    <!-- Facebook Pixel Code -->
+    <!-- Meta Pixel Code -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -20,12 +20,12 @@
             s.parentNode.insertBefore(t, s)
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('init', '1929004447690267');
         fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
-    <!-- End Facebook Pixel Code -->
+            src="https://www.facebook.com/tr?id=1929004447690267&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-YOUR_ADS_ID"></script>
@@ -182,60 +182,33 @@
                     <!-- Mascot Image -->
                     <img src="img/mascot_lion.png" class="hero-mascot" alt="Mascota PREUFUNDEL">
 
-                    <!-- Form moved from Section 2 -->
-                    <form onsubmit="event.preventDefault(); alert('¡Datos enviados! Un asesor te contactará pronto.');"
-                        style="background: white; padding: 35px; border-radius: 20px; box-shadow: 0 15px 50px rgba(0,32,96,0.1); border: 1px solid rgba(0,0,0,0.05); position: relative; overflow:hidden;">
-                        <div
-                            style="position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--color-brand-blue), var(--color-cyan));">
-                        </div>
-
-                        <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.5rem;">¿Dudas sobre el ingreso?
+                    <!-- CAPI Integration: Added ID and Script -->
+                    <form id="lead-form"
+                        style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                        <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.6rem;">¿DUDAS SOBRE EL INGRESO?
                         </h3>
                         <p style="color: #64748b; margin-bottom: 25px; font-size: 0.95rem;">Déjanos tus datos y te
                             asesoramos gratuitamente.</p>
 
                         <div style="margin-bottom: 15px;">
-                            <label
-                                style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">Nombre
-                                del Representante</label>
-                            <div style="position: relative;">
-                                <ion-icon name="people-outline"
-                                    style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
-                                <input type="text" placeholder="Ej: Juan Pérez" required
-                                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; transition: 0.3s;"
-                                    onfocus="this.style.borderColor='var(--color-brand-blue)'; this.style.background='white';">
-                            </div>
-                        </div>
 
-                        <div style="margin-bottom: 15px;">
-                            <label
-                                style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">Nombre
-                                del Estudiante</label>
-                            <div style="position: relative;">
-                                <ion-icon name="person-outline"
-                                    style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
-                                <input type="text" placeholder="Ej: Maria Torres" required
-                                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; transition: 0.3s;"
-                                    onfocus="this.style.borderColor='var(--color-brand-blue)'; this.style.background='white';">
+                            <div style="margin-bottom: 20px;">
+                                <label
+                                    style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">WhatsApp</label>
+                                <div style="position: relative;">
+                                    <ion-icon name="logo-whatsapp"
+                                        style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
+                                    <input type="tel" placeholder="Ej: 0991234567" required
+                                        style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; transition: 0.3s;"
+                                        onfocus="this.style.borderColor='var(--color-brand-blue)'; this.style.background='white';">
+                                </div>
                             </div>
-                        </div>
 
-                        <div style="margin-bottom: 20px;">
-                            <label
-                                style="display: block; margin-bottom: 8px; color: #475569; font-weight: 600; font-size: 0.9rem;">WhatsApp</label>
-                            <div style="position: relative;">
-                                <ion-icon name="logo-whatsapp"
-                                    style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #94a3b8;"></ion-icon>
-                                <input type="tel" placeholder="Ej: 0991234567" required
-                                    style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #e2e8f0; border-radius: 10px; background: #f8fafc; transition: 0.3s;"
-                                    onfocus="this.style.borderColor='var(--color-brand-blue)'; this.style.background='white';">
-                            </div>
-                        </div>
-
-                        <button class="btn btn-primary" style="width: 100%; justify-content: center; font-weight: 700;">
-                            SOLICITAR ASESORÍA
-                            <ion-icon name="arrow-forward" style="margin-left: 8px;"></ion-icon>
-                        </button>
+                            <button class="btn btn-primary"
+                                style="width: 100%; justify-content: center; font-weight: 700;">
+                                SOLICITAR ASESORÍA
+                                <ion-icon name="arrow-forward" style="margin-left: 8px;"></ion-icon>
+                            </button>
                     </form>
                 </div>
 

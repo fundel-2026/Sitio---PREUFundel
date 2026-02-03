@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1929004447690267');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1929004447690267&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>Inscripción PREUFUNDEL 2026 | Reserva Tu Plaza Ahora - Cupos Limitados</title>
     <meta name="description"
         content="Inscríbete YA en PREUFUNDEL 2026. ÚLTIMAS PLAZAS DISPONIBLES. Proceso rápido en 4 pasos, garantía de resultados, facilidades de pago. Contáctanos y asegura tu cupo universitario.">
@@ -141,7 +161,8 @@
                     </div>
                 </div>
                 <div>
-                    <form
+                    <!-- CAPI Integration -->
+                    <form id="contact-form"
                         style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
                         <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.6rem;">🎯 RESERVA TU PLAZA</h3>
                         <p style="color: #334155; margin-bottom: 25px; font-size: 0.95rem;">Completa el formulario y
@@ -149,12 +170,12 @@
                                 menos de 2 horas.</strong></p>
                         <div style="margin-bottom: 15px;">
                             <label style="font-weight: 700; font-size: 0.9rem;">Nombre del Estudiante</label>
-                            <input type="text"
+                            <input type="text" name="name"
                                 style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px;">
                         </div>
                         <div style="margin-bottom: 15px;">
                             <label style="font-weight: 700; font-size: 0.9rem;">Celular / WhatsApp</label>
-                            <input type="tel"
+                            <input type="tel" name="phone"
                                 style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px;">
                         </div>
                         <div style="margin-bottom: 15px;">
@@ -173,11 +194,13 @@
                                 style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px; height: 100px;"></textarea>
                         </div>
                         <button class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;"
-                            onclick="event.preventDefault(); alert('¡Gracias! Tu solicitud fue recibida. Un asesor te contactará en las próximas 2 horas para confirmar tu cupo.');">🚀
+                            onclick="alert('¡Gracias! Tu solicitud fue recibida. Un asesor te contactará en las próximas 2 horas para confirmar tu cupo.');">🚀
                             RESERVAR MI PLAZA AHORA</button>
                         <p style="text-align: center; margin-top: 15px; font-size: 0.85rem; color: #64748b;">🔒 Tus
                             datos están protegidos. No spam.</p>
                     </form>
+                    <!-- CAPI Client Script -->
+                    <script src="js/capi-client.js"></script>
                 </div>
             </div>
         </div>
