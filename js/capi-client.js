@@ -23,14 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const eventId = generateEventId();
 
             // 1. Get Data from Form
-            // Adjust selectors based on your actual HTML input names/IDs
-            const firstName = form.querySelector('input[name="name"]')?.value || form.querySelector('input[type="text"]')?.value || '';
+            // Updated to capture: Representative Name, Student Name, WhatsApp
+            const representativeName = form.querySelector('input[name="parent_name"]')?.value || form.querySelector('input[name="name"]')?.value || '';
+            const studentName = form.querySelector('input[name="student_name"]')?.value || '';
             const phone = form.querySelector('input[name="phone"]')?.value || form.querySelector('input[type="tel"]')?.value || '';
-            const email = form.querySelector('input[name="email"]')?.value || ''; // If exists
+            const email = form.querySelector('input[name="email"]')?.value || ''; // Optional if present
 
             // 2. Fire Browser Pixel (Redundancy)
             if (typeof fbq === 'function') {
-                fbq('track', 'Lead', {}, { eventID: eventId });
+                fbq('track', 'Lead', {
+                    content_name: 'Inscripción',
+                    custom_data: {
+                        student_name: studentName,
+                        representative_name: representativeName
+                    }
+                }, { eventID: eventId });
             }
 
             // 3. Send to Server (CAPI)
@@ -40,7 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    firstName: firstName,
+                    firstName: representativeName, // Primary match key (Owner of the phone number)
+                    studentName: studentName,      // Custom data (for Context)
                     phone: phone,
                     email: email,
                     eventId: eventId,
