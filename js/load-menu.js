@@ -77,3 +77,52 @@ if (document.readyState === 'loading') {
 } else {
     cargarMenu();
 }
+
+// WhatsApp Link Tracking
+function updateWhatsAppLinks() {
+    const currentUrl = window.location.href;
+    const whatsappLinks = document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp.com"]');
+
+    whatsappLinks.forEach(link => {
+        let href = link.getAttribute('href');
+        if (href) {
+            // Check if text parameter already exists
+            if (href.includes('text=')) {
+                if (!href.includes(currentUrl)) { // Avoid duplicating if already present
+                    // Decode URL to handle existing encoded characters correctly
+                    try {
+                        let url = new URL(href);
+                        let text = url.searchParams.get('text');
+                        let newText = text + ` (Desde: ${currentUrl})`;
+                        url.searchParams.set('text', newText);
+                        link.setAttribute('href', url.toString());
+                    } catch (e) {
+                        // Fallback for simple string manipulation if URL parsing fails (e.g. partial URLs)
+                        if (!href.includes('(Desde:')) {
+                            link.setAttribute('href', href + `%20(Desde:%20${encodeURIComponent(currentUrl)})`);
+                        }
+                    }
+                }
+            } else {
+                // Add text parameter if missing
+                const separator = href.includes('?') ? '&' : '?';
+                link.setAttribute('href', href + `${separator}text=Hola,%20quisiera%20más%20información%20(Desde:%20${encodeURIComponent(currentUrl)})`);
+            }
+        }
+    });
+}
+
+// Executar actualización de links
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initial run
+        updateWhatsAppLinks();
+        // Run again after a slight delay to catch dynamically loaded content (like footer)
+        setTimeout(updateWhatsAppLinks, 1000);
+        setTimeout(updateWhatsAppLinks, 3000);
+    });
+} else {
+    updateWhatsAppLinks();
+    setTimeout(updateWhatsAppLinks, 1000);
+    setTimeout(updateWhatsAppLinks, 3000);
+}
