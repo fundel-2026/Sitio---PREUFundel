@@ -116,13 +116,7 @@
                 </div>
 
                 <div class="hero-content-left">
-                    <!-- Badge -->
-                    <div class="admission-badge">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 2L12.5 7L18 7.75L14 11.5L15 17L10 14.5L5 17L6 11.5L2 7.75L7.5 7L10 2Z" />
-                        </svg>
-                        <span>🔥 ¡ÚLTIMAS 15 PLAZAS! Admisión 2026</span>
-                    </div>
+
 
                     <!-- Título Principal -->
                     <h1 class="hero-main-title">
@@ -142,24 +136,24 @@
                                 stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Resultados Comprobados:</strong> 95% de ingreso universitario
-                                garantizado</span>
+                            <span><strong>Uno de los primeros preuniversitarios de Ecuador:</strong> Con más de 15 años
+                                formando profesionales exitosos</span>
                         </li>
                         <li>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Metodología RUGE:</strong> Sistema científico probado con +5,000
-                                estudiantes</span>
+                            <span><strong>Aprueba desde el primer examen ser Bachiller:</strong> Preparación integral
+                                que garantiza tu ingreso</span>
                         </li>
                         <li>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
                                 <polyline points="20 6 9 17 4 12" />
                             </svg>
-                            <span><strong>Docentes de Élite:</strong> Expertos universitarios con 15+ años de
-                                experiencia</span>
+                            <span><strong>Metodología RUGE:</strong> Sistema científico probado con +20,000 estudiantes
+                                exitosos</span>
                         </li>
                     </ul>
 
@@ -179,62 +173,41 @@
                             📚 Ver Programas y Precios
                         </a>
                     </div>
-
-                    <!-- Trust Indicators -->
-                    <div class="trust-bar">
-                        <div class="trust-item">
-                            <div class="trust-number">5,000+</div>
-                            <div class="trust-label">Estudiantes Exitosos</div>
-                        </div>
-                        <div class="trust-item">
-                            <div class="trust-number">95%</div>
-                            <div class="trust-label">Tasa de Aprobación</div>
-                        </div>
-                        <div class="trust-item">
-                            <div class="trust-number">28</div>
-                            <div class="trust-label">Universidades Top</div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- COLUMNA DERECHA: VISUAL -->
                 <div class="hero-visual-right" style="position: relative;">
                     <!-- Mascot Image -->
-                    <img src="img/mascot_lion.png" class="hero-mascot" alt="Mascota PREUFUNDEL">
+                    <img src="img/mascot_lion.png" class="hero-mascot" alt="Mascota PREUFUNDEL" loading="lazy">
 
                     <!-- CAPI Integration: Added ID and Script -->
-                    <form id="lead-form"
-                        style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                        <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.6rem;">¿DUDAS SOBRE EL INGRESO?
-                        </h3>
-                        <p style="color: #64748b; margin-bottom: 25px; font-size: 0.95rem;">Déjanos tus datos y te
-                            asesoramos gratuitamente.</p>
+                    <form id="lead-form" class="hero-form">
+                        <h3>¿DUDAS SOBRE EL INGRESO?</h3>
+                        <p>Déjanos tus datos y te asesoramos gratuitamente.</p>
 
-                        <div style="margin-bottom: 15px;">
-                            <label style="font-weight: 700; font-size: 0.9rem; color: #334155;">Nombre del
-                                Representante</label>
-                            <input type="text" placeholder="Ej: Juan Pérez" name="parent_name"
-                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px; background: #f8fafc;">
+                        <div class="hero-input-group">
+                            <label for="parent_name">Nombre del Representante</label>
+                            <input type="text" id="parent_name" placeholder="Ej: Juan Pérez" name="parent_name"
+                                class="hero-input">
                         </div>
 
-                        <div style="margin-bottom: 15px;">
-                            <label style="font-weight: 700; font-size: 0.9rem; color: #334155;">Nombre del
-                                Estudiante</label>
-                            <input type="text" placeholder="Ej: Maria Torres" name="student_name"
-                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px; background: #f8fafc;">
+                        <div class="hero-input-group">
+                            <label for="student_name">Nombre del Estudiante</label>
+                            <input type="text" id="student_name" placeholder="Ej: Maria Torres" name="student_name"
+                                class="hero-input">
                         </div>
 
-                        <div style="margin-bottom: 25px;">
-                            <label style="font-weight: 700; font-size: 0.9rem; color: #334155;">WhatsApp</label>
-                            <input type="tel" placeholder="Ej: 0991234567" name="phone"
-                                style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; margin-top: 5px; background: #f8fafc;">
+                        <div class="hero-input-group" style="margin-bottom: 25px;">
+                            <label for="phone">WhatsApp</label>
+                            <input type="tel" id="phone" placeholder="Ej: 0991234567" name="phone" class="hero-input">
                         </div>
 
-                        <button class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 16px;">SOLICITAR
-                            ASESORÍA <ion-icon name="arrow-forward"></ion-icon></button>
+                        <button type="submit" class="btn-hero-submit">
+                            SOLICITAR ASESORÍA
+                            <ion-icon name="arrow-forward"></ion-icon>
+                        </button>
                     </form>
                 </div>
-
             </div>
         </div>
 
@@ -1721,7 +1694,8 @@
 
     <!-- León Interactivo -->
     <script src="js/leon-interaction.js"></script>
-
+    <!-- Form Validation -->
+    <script src="js/hero-form-validation.js"></script>
 </body>
 
 </html>

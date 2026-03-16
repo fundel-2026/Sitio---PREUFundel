@@ -11,7 +11,7 @@ function cargarMenu() {
         <nav>
             <div class="container"
                 style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
-                <a href="index.html"><img src="img/logo-preufundel.png" style="height: 80px; margin-right: 20px;" alt="PREUFUNDEL Logo"></a>
+                <a href="index.html"><img src="img/logo-preufundel.png" style="height: 40px; margin-right: 20px;" alt="PREUFUNDEL Logo"></a>
                 
                 <button class="hamburger" id="hamburger-btn">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -25,7 +25,7 @@ function cargarMenu() {
                     <a href="orientacion.html" ${paginaActual === 'orientacion.html' ? 'class="active" style="color: var(--color-cyan);"' : ''}>Orientación Vocacional</a>
                     <a href="https://preuniversitario.fundel.com.ec/" target="_blank" style="color: var(--color-yellow); font-weight: 600;">Aulas Digitales</a>
                     <a href="contacto.html"
-                        style="background: var(--color-yellow); color: black; padding: 8px 16px; border-radius: 20px;">Inscripción al PREUFUNDEL</a>
+                        style="background: var(--color-yellow); color: black; padding: 8px 16px; border-radius: 20px;">Inscripción</a>
                 </div>
             </div>
         </nav>

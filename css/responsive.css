@@ -255,16 +255,25 @@
     }
 }
 
-/* Overflow seguro */
-* {
-    max-width: 100%;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-img {
+/* Overflow seguro — solo en elementos que realmente pueden desbordar */
+img,
+video,
+iframe,
+embed,
+svg {
     max-width: 100%;
     height: auto;
+}
+
+body,
+p,
+h1, h2, h3, h4, h5, h6,
+span,
+li,
+td,
+th {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* WhatsApp Float responsive */
@@ -290,3 +299,736 @@ img {
         padding: 40px 0 !important;
     }
 }
+
+/* ========================================
+   HERO SECTION - RESPONSIVE + ANIMACIONES
+   ======================================== */
+
+/* ANIMACIONES DE ENTRADA */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* APLICAR ANIMACIONES A ELEMENTOS */
+.hero-ultra .admission-badge {
+    animation: fadeInUp 0.6s ease-out 0.1s backwards !important;
+}
+
+.hero-ultra .hero-main-title {
+    animation: fadeInLeft 0.8s ease-out 0.2s backwards !important;
+}
+
+.hero-ultra .hero-subtitle {
+    animation: fadeInLeft 0.8s ease-out 0.3s backwards !important;
+}
+
+.hero-ultra .hero-features li:nth-child(1) {
+    animation: fadeInLeft 0.6s ease-out 0.4s backwards !important;
+}
+
+.hero-ultra .hero-features li:nth-child(2) {
+    animation: fadeInLeft 0.6s ease-out 0.5s backwards !important;
+}
+
+.hero-ultra .hero-features li:nth-child(3) {
+    animation: fadeInLeft 0.6s ease-out 0.6s backwards !important;
+}
+
+.hero-ultra .hero-actions {
+    animation: fadeInUp 0.6s ease-out 0.7s backwards !important;
+}
+
+.hero-ultra .trust-bar {
+    animation: fadeInUp 0.6s ease-out 0.8s backwards !important;
+}
+
+.hero-ultra .hero-form {
+    animation: fadeInRight 0.8s ease-out 0.3s backwards !important;
+}
+
+.hero-ultra .hero-mascot {
+    animation: scaleIn 1s ease-out 0.5s backwards !important;
+}
+
+.hero-ultra .paper-plane {
+    animation: float 3s ease-in-out infinite !important;
+}
+
+/* DESKTOP: 1024px+ */
+@media (min-width: 1024px) {
+
+    .hero-ultra {
+        padding: 100px 0 60px 0 !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+    
+    .hero-ultra .container {
+        max-width: 1320px !important;
+        margin: 0 auto !important;
+        padding: 0 40px !important;
+    }
+    
+    /* Grid balanceado */
+    .hero-ultra-grid {
+        display: grid !important;
+        grid-template-columns: 53fr 47fr !important;
+        gap: 40px !important;
+        align-items: center !important;
+    }
+    
+    .hero-content-left {
+        padding-right: 20px !important;
+    }
+    
+    /* Badge */
+    .admission-badge {
+        padding: 12px 24px !important;
+        font-size: 0.9rem !important;
+        margin-bottom: 24px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    
+    .admission-badge svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    /* T�tulos */
+    .hero-main-title {
+        font-size: 3rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 18px !important;
+        letter-spacing: -0.5px !important;
+    }
+    
+    .title-highlight {
+        font-size: 3rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 28px !important;
+        opacity: 0.95 !important;
+    }
+    
+    /* Features list */
+    .hero-features {
+        margin-bottom: 28px !important;
+        padding: 0 !important;
+        list-style: none !important;
+    }
+    
+    .hero-features li {
+        margin-bottom: 16px !important;
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        display: flex !important;
+        gap: 12px !important;
+        align-items: flex-start !important;
+    }
+    
+    .hero-features li:last-child {
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-features svg {
+        width: 22px !important;
+        height: 22px !important;
+        margin-top: 2px !important;
+        flex-shrink: 0 !important;
+        color: #00CED1 !important;
+    }
+    
+    .hero-features strong {
+        font-weight: 700 !important;
+    }
+    
+    /* Botones CTA */
+    .hero-actions {
+        display: flex !important;
+        gap: 16px !important;
+        margin-bottom: 32px !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .btn-primary-hero,
+    .btn-secondary-hero {
+        padding: 16px 28px !important;
+        font-size: 1rem !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        transition: all 0.3s ease !important;
+        white-space: nowrap !important;
+    }
+    
+    .btn-primary-hero:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4) !important;
+    }
+    
+    .btn-secondary-hero:hover {
+        transform: translateY(-2px) !important;
+        background: rgba(255, 255, 255, 0.15) !important;
+    }
+    
+    .btn-primary-hero svg,
+    .btn-secondary-hero svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    
+    /* Trust bar */
+    .trust-bar {
+        display: flex !important;
+        justify-content: flex-start !important;
+        gap: 48px !important;
+        margin-top: 0 !important;
+    }
+    
+    .trust-item {
+        text-align: center !important;
+    }
+    
+    .trust-number {
+        font-size: 2.5rem !important;
+        margin-bottom: 6px !important;
+        font-weight: 900 !important;
+        line-height: 1 !important;
+    }
+    
+    .trust-label {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+        opacity: 0.9 !important;
+    }
+    
+    /* Formulario */
+    .hero-visual-right {
+        position: relative !important;
+    }
+    
+    .hero-form {
+        position: relative !important;
+        z-index: 10 !important;
+        width: 100% !important;
+        max-width: 460px !important;
+        margin: 0 auto !important;
+        padding: 36px 32px !important;
+        background: white !important;
+        border-radius: 20px !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .hero-form h3 {
+        font-size: 1.4rem !important;
+        margin-bottom: 10px !important;
+        line-height: 1.3 !important;
+        color: #002060 !important;
+        font-weight: 800 !important;
+    }
+    
+    .hero-form > p {
+        font-size: 0.95rem !important;
+        margin-bottom: 24px !important;
+        line-height: 1.5 !important;
+        color: #64748b !important;
+    }
+    
+    .hero-input-group {
+        margin-bottom: 18px !important;
+    }
+    
+    .hero-input-group label {
+        display: block !important;
+        font-size: 0.9rem !important;
+        font-weight: 600 !important;
+        color: #334155 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .hero-input {
+        width: 100% !important;
+        height: 52px !important;
+        padding: 14px 16px !important;
+        font-size: 15px !important;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 10px !important;
+        background: #f8fafc !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .hero-input:focus {
+        outline: none !important;
+        border-color: #00ced1 !important;
+        box-shadow: 0 0 0 4px rgba(0, 206, 209, 0.1) !important;
+        background: white !important;
+    }
+    
+    .hero-input::placeholder {
+        color: #94a3b8 !important;
+    }
+    
+    .btn-hero-submit {
+        width: 100% !important;
+        height: 56px !important;
+        padding: 16px 24px !important;
+        font-size: 1.05rem !important;
+        font-weight: 700 !important;
+        background: linear-gradient(135deg, #FFD700, #FFA500) !important;
+        color: #002060 !important;
+        border: none !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        cursor: pointer !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 6px 16px rgba(255, 215, 0, 0.3) !important;
+        margin-top: 8px !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+    }
+    
+    .btn-hero-submit:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 10px 24px rgba(255, 215, 0, 0.4) !important;
+    }
+    
+    .btn-hero-submit:active {
+        transform: translateY(-1px) !important;
+    }
+    
+    .btn-hero-submit ion-icon {
+        font-size: 1.3rem !important;
+    }
+    
+    /* Le�n decorativo */
+    .hero-mascot {
+        display: block !important;
+        position: absolute !important;
+        right: -50px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        max-width: 480px !important;
+        height: auto !important;
+        opacity: 0.95 !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+    
+    /* Aviones decorativos */
+    .hero-planes {
+        display: block !important;
+        opacity: 0.7 !important;
+    }
+    
+    .paper-plane {
+        max-width: 100px !important;
+    }
+}
+
+/* DESKTOP EXTRA GRANDE: 1600px+ */
+@media (min-width: 1600px) {
+    
+    .hero-ultra .container {
+        max-width: 1480px !important;
+    }
+    
+    .hero-ultra-grid {
+        gap: 60px !important;
+    }
+    
+    .hero-main-title {
+        font-size: 3.5rem !important;
+    }
+    
+    .title-highlight {
+        font-size: 3.5rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem !important;
+    }
+    
+    .hero-features li {
+        font-size: 1.05rem !important;
+    }
+    
+    .hero-mascot {
+        max-width: 550px !important;
+        right: -80px !important;
+    }
+    
+    .hero-form {
+        max-width: 500px !important;
+        padding: 40px 36px !important;
+    }
+    
+    .trust-bar {
+        gap: 60px !important;
+    }
+    
+    .trust-number {
+        font-size: 2.8rem !important;
+    }
+    
+    .trust-label {
+        font-size: 0.9rem !important;
+    }
+}
+
+/* TABLET: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Ocultar le�n en tablet */
+    .hero-mascot {
+        display: none !important;
+    }
+
+    .hero-planes {
+        opacity: 0.4 !important;
+    }
+
+    .hero-ultra {
+        padding: 100px 0 60px 0 !important;
+    }
+    
+    .hero-ultra .container {
+        padding: 0 32px !important;
+    }
+    
+    .hero-ultra-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 36px !important;
+        align-items: start !important;
+    }
+    
+    .hero-content-left {
+        text-align: left !important;
+    }
+    
+    .admission-badge {
+        padding: 10px 20px !important;
+        font-size: 0.85rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .hero-main-title {
+        font-size: 2.4rem !important;
+        margin-bottom: 16px !important;
+    }
+    
+    .title-highlight {
+        font-size: 2.4rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.05rem !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .hero-features {
+        margin-bottom: 24px !important;
+    }
+    
+    .hero-features li {
+        font-size: 0.95rem !important;
+        margin-bottom: 14px !important;
+    }
+    
+    .hero-actions {
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-bottom: 28px !important;
+    }
+    
+    .btn-primary-hero,
+    .btn-secondary-hero {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px 24px !important;
+    }
+    
+    .trust-bar {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        gap: 20px !important;
+    }
+    
+    .trust-number {
+        font-size: 2rem !important;
+    }
+    
+    .trust-label {
+        font-size: 0.8rem !important;
+    }
+    
+    .hero-form {
+        max-width: 100% !important;
+        padding: 32px 28px !important;
+    }
+    
+    .hero-input {
+        height: 50px !important;
+    }
+    
+    .btn-hero-submit {
+        height: 54px !important;
+    }
+}
+
+/* M�VIL: 320px - 767px */
+@media (max-width: 767px) {
+
+    /* Ocultar le�n y aviones */
+    .hero-mascot,
+    .hero-planes,
+    .paper-plane {
+        display: none !important;
+    }
+
+    .hero-ultra {
+        padding: 92px 0 40px 0 !important;
+    }
+    
+    .hero-ultra .container {
+        padding: 0 16px !important;
+    }
+    
+    .hero-ultra-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 28px !important;
+    }
+    
+    .hero-content-left {
+        width: 100% !important;
+        text-align: center !important;
+        order: 1;
+    }
+    
+    .admission-badge {
+        padding: 10px 18px !important;
+        font-size: 0.8rem !important;
+        justify-content: center !important;
+        margin: 0 auto 18px !important;
+        display: inline-flex !important;
+    }
+    
+    .admission-badge svg {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    
+    .hero-main-title {
+        font-size: 2rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 14px !important;
+    }
+    
+    .title-highlight {
+        font-size: 2rem !important;
+        display: block !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 24px !important;
+        padding: 0 8px !important;
+    }
+    
+    .hero-features {
+        text-align: left !important;
+        padding: 0 !important;
+        margin-bottom: 24px !important;
+    }
+    
+    .hero-features li {
+        margin-bottom: 14px !important;
+        font-size: 0.9rem !important;
+        display: flex !important;
+        gap: 10px !important;
+        align-items: flex-start !important;
+    }
+    
+    .hero-features svg {
+        width: 20px !important;
+        height: 20px !important;
+        margin-top: 2px !important;
+    }
+    
+    .hero-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin-bottom: 28px !important;
+        width: 100% !important;
+    }
+    
+    .btn-primary-hero,
+    .btn-secondary-hero {
+        width: 100% !important;
+        padding: 15px 24px !important;
+        font-size: 0.95rem !important;
+        justify-content: center !important;
+    }
+    
+    .trust-bar {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 16px !important;
+    }
+    
+    .trust-item {
+        text-align: center !important;
+    }
+    
+    .trust-number {
+        font-size: 1.8rem !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .trust-label {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .hero-visual-right {
+        width: 100% !important;
+        order: 2;
+    }
+    
+    .hero-form {
+        width: 100% !important;
+        padding: 24px 20px !important;
+        margin: 0 !important;
+        background: white !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    .hero-form h3 {
+        font-size: 1.2rem !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .hero-form > p {
+        font-size: 0.9rem !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .hero-input-group {
+        margin-bottom: 14px !important;
+    }
+    
+    .hero-input-group label {
+        font-size: 0.9rem !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .hero-input {
+        height: 50px !important;
+        font-size: 16px !important;
+        padding: 14px !important;
+    }
+    
+    .btn-hero-submit {
+        height: 54px !important;
+        font-size: 1rem !important;
+    }
+}
+
+/* M�VILES PEQUE�OS: 320px - 374px */
+@media (max-width: 374px) {
+    
+    .hero-main-title {
+        font-size: 1.7rem !important;
+    }
+    
+    .title-highlight {
+        font-size: 1.7rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.88rem !important;
+    }
+    
+    .hero-features li {
+        font-size: 0.85rem !important;
+    }
+    
+    .trust-number {
+        font-size: 1.5rem !important;
+    }
+    
+    .trust-label {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* FIX iOS ZOOM */
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+    font-size: 16px !important;
+}
+
