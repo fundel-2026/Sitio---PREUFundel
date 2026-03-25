@@ -255,18 +255,49 @@
                 <div>
                     <!-- Static Form Injection -->
                     <!-- Video moves here -->
-                    <div
-                        style="position: relative; background: rgba(255,255,255,0.05); border-radius: 20px; overflow: hidden; border: 2px solid var(--color-cyan);">
+                    <!-- Video Real Implementado con Autoplay y Silencio Personalizado -->
+                    <div style="position: relative; max-width: 320px; margin: 0 auto;">
                         <div
-                            style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 40px; text-align: center;">
-                            <ion-icon name="play-circle-outline"
-                                style="font-size: 5rem; color: var(--color-cyan); margin-bottom: 20px;"></ion-icon>
-                            <h3 style="margin-bottom: 10px;">VIDEO INSTITUCIONAL</h3>
-                            <p style="opacity: 0.7; font-size: 0.9rem;">Conoce más sobre PREUFUNDEL</p>
-                            <p style="opacity: 0.5; font-size: 0.8rem; margin-top: 20px;">[Reemplazar con video de
-                                YouTube o archivo local]</p>
+                            style="position: relative; background: #000; border-radius: 30px; overflow: hidden; border: 4px solid #fff; box-shadow: 0 20px 50px rgba(0,0,0,0.2); aspect-ratio: 9/16;">
+                            <video id="video-promo" autoplay muted loop playsinline
+                                style="width: 100%; height: 100%; object-fit: cover;" poster="img/logo-preufundel.png">
+                                <source src="video/video_institucional.mp4" type="video/mp4">
+                                Tu navegador no soporta el video.
+                            </video>
+
+                            <!-- Botón de Silencio Personalizado -->
+                            <button id="toggle-sound"
+                                style="position: absolute; bottom: 20px; right: 20px; background: rgba(0,0,0,0.6); border: 2px solid #fff; color: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.3s ease; backdrop-filter: blur(5px);">
+                                <ion-icon id="sound-icon" name="volume-mute-outline" style="font-size: 1.5rem;"></ion-icon>
+                            </button>
+                        </div>
+                        <!-- Efecto Decorativo Detrás -->
+                        <div
+                            style="position: absolute; top: 10px; left: 10px; right: -10px; bottom: -10px; background: var(--color-cyan); opacity: 0.2; border-radius: 30px; z-index: -1;">
                         </div>
                     </div>
+
+                    <script>
+                        const video = document.getElementById('video-promo');
+                        const soundBtn = document.getElementById('toggle-sound');
+                        const soundIcon = document.getElementById('sound-icon');
+
+                        soundBtn.addEventListener('click', () => {
+                            if (video.muted) {
+                                video.muted = false;
+                                soundIcon.setAttribute('name', 'volume-high-outline');
+                                soundBtn.style.background = 'var(--color-cyan)';
+                                soundBtn.style.borderColor = 'var(--color-cyan)';
+                                soundBtn.style.color = '#002060';
+                            } else {
+                                video.muted = true;
+                                soundIcon.setAttribute('name', 'volume-mute-outline');
+                                soundBtn.style.background = 'rgba(0,0,0,0.6)';
+                                soundBtn.style.borderColor = '#fff';
+                                soundBtn.style.color = '#fff';
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </div>
