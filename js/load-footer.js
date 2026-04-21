@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <ul style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 15px; display: flex; gap: 10px;">
                             <ion-icon name="location" style="color: var(--color-yellow); font-size: 1.2rem; flex-shrink: 0; margin-top: 3px;"></ion-icon>
-                            <span><strong>Matriz Ambato:</strong><br>Quiz Quiz y Atahualpa</span>
+                            <span><strong>Matriz Ambato:</strong><br>Quiz Quiz y Atahualpa (Redondel Atahualpa)</span>
                         </li>
                         <li style="margin-bottom: 15px; display: flex; gap: 10px;">
                            <ion-icon name="call" style="color: var(--color-yellow); font-size: 1.2rem; flex-shrink: 0; margin-top: 3px;"></ion-icon>
