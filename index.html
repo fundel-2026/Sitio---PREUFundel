@@ -241,14 +241,16 @@
                     </p>
                     <p style="font-size: 1.1rem; line-height: 1.8; color: #475569;">
                         Con el respaldo institucional de FUNDEL, te garantizamos <strong>docentes expertos</strong>,
-                        <strong>simulacros reales Viceministerio de Educación</strong>, y <strong>acompañamiento personalizado</strong>
+                        <strong>simulacros reales Viceministerio de Educación</strong>, y <strong>acompañamiento
+                            personalizado</strong>
                         hasta que logres tu cupo. No arriesgues tu futuro con improvisados. <span
                             style="color: #FF4444; font-weight: 700;">¡Las plazas se agotan rápido!</span>
                     </p>
                     <div
                         style="margin-top: 30px; padding: 20px; background: rgba(255,213,0,0.1); border-left: 4px solid #FFD500; border-radius: 8px;">
                         <p style="font-weight: 700; color: #002060; margin-bottom: 8px;">🎯 Asesoría de Postulación</p>
-                        <p style="font-size: 0.95rem; color: #475569; margin: 0;">No solo te preparamos para el examen, también te asesoramos en cada paso de tu postulación hasta que obtengas tu ingreso.</p>
+                        <p style="font-size: 0.95rem; color: #475569; margin: 0;">No solo te preparamos para el examen,
+                            también te asesoramos en cada paso de tu postulación hasta que obtengas tu ingreso.</p>
                     </div>
                 </div>
                 <div>
@@ -350,8 +352,10 @@
                         <span style="color: white; font-size: 1.8rem; font-weight: 800;">2</span>
                     </div>
                     <div style="flex: 1; padding-left: 20px;">
-                        <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Inscripción a Universidades e Institutos</h3>
-                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Podrás inscribirte a Universidades e Institutos Públicos.</p>
+                        <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Inscripción
+                            a Universidades e Institutos</h3>
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Podrás inscribirte a
+                            Universidades e Institutos Públicos.</p>
                     </div>
                 </div>
 
@@ -359,7 +363,8 @@
                 <div class="reveal"
                     style="display: flex; align-items: center; gap: 30px; margin-bottom: 0px; position: relative;">
                     <div style="flex: 1; text-align: right; padding-right: 20px;">
-                        <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Evaluación Universidades e Institutos</h3>
+                        <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">Evaluación
+                            Universidades e Institutos</h3>
                         <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Periodo en el cual podrás
                             rendir la evaluación para el proceso de acceso a las Universidades e Institutos.</p>
                     </div>
@@ -427,7 +432,8 @@
                     <div style="flex: 1; text-align: right; padding-right: 20px;">
                         <h3 style="color: white; font-size: 1.4rem; margin-bottom: 10px; font-weight: 700;">
                             Matriculación Universidades e Institutos</h3>
-                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Requisitará información en cada una de las Universidades e Institutos Públicos sobre los pasos para efectivizar
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">Requisitará información en cada
+                            una de las Universidades e Institutos Públicos sobre los pasos para efectivizar
                             tu matrícula.</p>
                     </div>
                     <div
@@ -478,43 +484,60 @@
                 <div
                     style="background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); border-radius: 25px; padding: 50px 40px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
 
+                    <!-- Buscador de Universidad -->
+                    <div style="margin-bottom: 30px;">
+                        <label style="display: block; color: white; font-weight: 700; margin-bottom: 10px; font-size: 1.1rem;">
+                            <ion-icon name="business-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+                            Universidad
+                        </label>
+                        <div style="position: relative;">
+                            <input type="text" id="buscarUniversidad"
+                                placeholder="Escribe o selecciona tu universidad..."
+                                autocomplete="off"
+                                style="width: 100%; padding: 16px 20px; border-radius: 12px; border: 2px solid rgba(0,206,209,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1rem; font-weight: 600; transition: all 0.3s; box-sizing: border-box;"
+                                onfocus="this.style.border='2px solid rgba(0,206,209,0.8)'; this.style.background='rgba(255,255,255,0.15)'; mostrarSugerencias();"
+                                onblur="this.style.border='2px solid rgba(0,206,209,0.3)'; this.style.background='rgba(255,255,255,0.1)'; setTimeout(ocultarSugerencias, 200);"
+                                oninput="filtrarUniversidades()">
+                            <div id="sugerencias"
+                                style="display: none; position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #0f2744; border-radius: 12px; border: 1px solid rgba(0,206,209,0.3); max-height: 240px; overflow-y: auto; z-index: 200; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                            </div>
+                        </div>
+                        <div style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+                            <div style="background: rgba(0,206,209,0.15); border: 1px solid rgba(0,206,209,0.4); border-radius: 20px; padding: 5px 14px; display: inline-flex; align-items: center; gap: 8px;">
+                                <span id="badgeGrado" style="color: #00CED1; font-size: 0.82rem; font-weight: 700;">Grado 50%</span>
+                                <span style="color: rgba(255,255,255,0.3);">·</span>
+                                <span id="badgeExamen" style="color: #FFD700; font-size: 0.82rem; font-weight: 700;">Examen 50%</span>
+                            </div>
+                            <span id="uniNombre" style="color: rgba(255,255,255,0.5); font-size: 0.8rem; font-style: italic;">General — aplica a la mayoría de universidades</span>
+                        </div>
+                    </div>
+
                     <!-- Formulario -->
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
                         <!-- Input 1: Nota del Grado -->
                         <div>
-                            <label
-                                style="display: block; color: white; font-weight: 700; margin-bottom: 10px; font-size: 1.1rem;">
-                                <ion-icon name="school-outline"
-                                    style="vertical-align: middle; margin-right: 8px;"></ion-icon>
-                                Nota del Grado
+                            <label style="display: block; color: white; font-weight: 700; margin-bottom: 10px; font-size: 1.1rem;">
+                                <ion-icon name="school-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+                                Nota del Grado <span id="pctGrado" style="color: #00CED1;">(50%)</span>
                             </label>
-                            <input type="number" id="notaGrado" placeholder="Ej: 8.5 o 850" min="0" max="1000"
-                                step="0.01"
-                                style="width: 100%; padding: 18px 20px; border-radius: 12px; border: 2px solid rgba(0,206,209,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1.3rem; font-weight: 700; text-align: center; transition: all 0.3s;"
+                            <input type="number" id="notaGrado" placeholder="Ej: 8.5 o 850" min="0" max="1000" step="0.01"
+                                style="width: 100%; padding: 18px 20px; border-radius: 12px; border: 2px solid rgba(0,206,209,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1.3rem; font-weight: 700; text-align: center; transition: all 0.3s; box-sizing: border-box;"
                                 onfocus="this.style.border='2px solid rgba(0,206,209,0.8)'; this.style.background='rgba(255,255,255,0.15)';"
                                 onblur="this.style.border='2px solid rgba(0,206,209,0.3)'; this.style.background='rgba(255,255,255,0.1)';">
-                            <p
-                                style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 8px; text-align: center;">
-                                Del 1 al 10 o de 100 en 100
-                            </p>
+                            <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 8px; text-align: center;">Del 1 al 10 o de 100 en 100</p>
                         </div>
 
-                        <!-- Input 2: Aciertos del Examen -->
+                        <!-- Input 2: Nota del Examen -->
                         <div>
-                            <label
-                                style="display: block; color: white; font-weight: 700; margin-bottom: 10px; font-size: 1.1rem;">
-                                <ion-icon name="checkmark-circle-outline"
-                                    style="vertical-align: middle; margin-right: 8px;"></ion-icon>
-                                Puntaje del Examen
+                            <label style="display: block; color: white; font-weight: 700; margin-bottom: 10px; font-size: 1.1rem;">
+                                <ion-icon name="checkmark-circle-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
+                                Nota del Examen <span id="pctExamen" style="color: #FFD700;">(50%)</span>
                             </label>
                             <input type="number" id="aciertosExamen" placeholder="Ej: 850" min="0" max="1000"
-                                style="width: 100%; padding: 18px 20px; border-radius: 12px; border: 2px solid rgba(255,215,0,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1.3rem; font-weight: 700; text-align: center; transition: all 0.3s;"
+                                style="width: 100%; padding: 18px 20px; border-radius: 12px; border: 2px solid rgba(255,215,0,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1.3rem; font-weight: 700; text-align: center; transition: all 0.3s; box-sizing: border-box;"
                                 onfocus="this.style.border='2px solid rgba(255,215,0,0.8)'; this.style.background='rgba(255,255,255,0.15)';"
                                 onblur="this.style.border='2px solid rgba(255,215,0,0.3)'; this.style.background='rgba(255,255,255,0.1)';">
-                            <p
-                                style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 8px; text-align: center;">
-                                Del 0 al 1000 puntos
-                            </p>
+                            <p style="color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 8px; text-align: center;">Del 0 al 1000 puntos</p>
                         </div>
                     </div>
 
@@ -609,6 +632,9 @@
             }
         }
 
+        #buscarUniversidad::placeholder { color: rgba(255,255,255,0.4); }
+        #buscarUniversidad { color: white; }
+
         /* Responsive */
         @media (max-width: 768px) {
             .section-dark .container>div:first-child {
@@ -618,48 +644,128 @@
     </style>
 
     <script>
+        // ── Universidad data ──────────────────────────────────────────────
+        const universidadesList = [
+            // 50 / 50  — general
+            { nombre: "ESPE - Universidad de las Fuerzas Armadas", g: 50, e: 50 },
+            { nombre: "UNACH - Universidad Nacional de Chimborazo", g: 50, e: 50 },
+            { nombre: "UTA - Universidad Técnica de Ambato", g: 50, e: 50 },
+            { nombre: "UCE - Universidad Central del Ecuador", g: 50, e: 50 },
+            { nombre: "UTN - Universidad Técnica del Norte", g: 50, e: 50 },
+            { nombre: "ESPOL - Escuela Superior Politécnica del Litoral", g: 50, e: 50 },
+            { nombre: "UNEMI - Universidad Estatal de Milagro", g: 50, e: 50 },
+            { nombre: "UG - Universidad de Guayaquil", g: 50, e: 50 },
+            { nombre: "UEB - Universidad Estatal de Bolívar", g: 50, e: 50 },
+            { nombre: "UEA - Universidad Estatal Amazónica", g: 50, e: 50 },
+            { nombre: "IKIAM - Universidad Regional Amazónica", g: 50, e: 50 },
+            { nombre: "UTMACH - Universidad Técnica de Machala", g: 50, e: 50 },
+            { nombre: "ULEAM - Universidad Laica Eloy Alfaro de Manabí", g: 50, e: 50 },
+            { nombre: "UNESUM - Universidad Estatal del Sur de Manabí", g: 50, e: 50 },
+            { nombre: "UNL - Universidad Nacional de Loja", g: 50, e: 50 },
+            { nombre: "PUCESE - Pontificia Universidad Católica del Ecuador Sede Esmeraldas", g: 50, e: 50 },
+            { nombre: "UTEG - Universidad Tecnológica Empresarial de Guayaquil", g: 50, e: 50 },
+            { nombre: "UCUENCA - Universidad de Cuenca", g: 50, e: 50 },
+            { nombre: "ESPOCH - Escuela Superior Politécnica de Chimborazo", g: 50, e: 50 },
+            { nombre: "UTB - Universidad Técnica de Babahoyo", g: 50, e: 50 },
+            { nombre: "UTC - Universidad Técnica de Cotopaxi", g: 50, e: 50 },
+            { nombre: "UTM - Universidad Técnica de Manabí", g: 50, e: 50 },
+            { nombre: "UTELVT - Universidad Técnica Luis Vargas Torres de Esmeraldas", g: 50, e: 50 },
+            { nombre: "UPEC - Universidad Politécnica Estatal del Carchi", g: 50, e: 50 },
+            { nombre: "UNAE - Universidad Nacional de Educación", g: 50, e: 50 },
+            { nombre: "FLACSO Ecuador - Facultad Latinoamericana de Ciencias Sociales", g: 50, e: 50 },
+            // 25 / 75
+            { nombre: "EPN - Escuela Politécnica Nacional", g: 25, e: 75 },
+            // 70 / 30
+            { nombre: "Yachay Tech - Universidad de Investigación de Tecnología Experimental", g: 70, e: 30 },
+            // 30 / 70
+            { nombre: "USECIPOL - Universidad de Seguridad y Ciencias Policiales", g: 30, e: 70 },
+            { nombre: "UTEQ - Universidad Técnica Estatal de Quevedo", g: 30, e: 70 },
+            // 65 / 35
+            { nombre: "UAE - Universidad Agraria del Ecuador", g: 65, e: 35 },
+            // 75 / 25
+            { nombre: "UPSE - Universidad Estatal Península de Santa Elena", g: 75, e: 25 },
+        ];
+
+        let pesoGrado = 0.5;
+        let pesoExamen = 0.5;
+
+        // ── Autocomplete ──────────────────────────────────────────────────
+        function filtrarUniversidades() {
+            const q = document.getElementById('buscarUniversidad').value.toLowerCase().trim();
+            const lista = q === ''
+                ? universidadesList
+                : universidadesList.filter(u => u.nombre.toLowerCase().includes(q));
+            renderSugerencias(lista);
+        }
+
+        function mostrarSugerencias() {
+            filtrarUniversidades();
+        }
+
+        function ocultarSugerencias() {
+            document.getElementById('sugerencias').style.display = 'none';
+        }
+
+        function renderSugerencias(lista) {
+            const box = document.getElementById('sugerencias');
+            if (lista.length === 0) { box.style.display = 'none'; return; }
+            box.innerHTML = lista.map(u => `
+                <div onclick="seleccionarUniversidad(${JSON.stringify(u).replace(/"/g, '&quot;')})"
+                    style="padding: 12px 18px; cursor: pointer; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; transition: background 0.2s;"
+                    onmouseover="this.style.background='rgba(0,206,209,0.15)'"
+                    onmouseout="this.style.background='transparent'">
+                    <span style="color: white; font-size: 0.9rem;">${u.nombre}</span>
+                    <span style="color: #00CED1; font-size: 0.75rem; font-weight: 700; white-space: nowrap; margin-left: 12px;">${u.g}% · ${u.e}%</span>
+                </div>`).join('');
+            box.style.display = 'block';
+        }
+
+        function seleccionarUniversidad(u) {
+            pesoGrado = u.g / 100;
+            pesoExamen = u.e / 100;
+            document.getElementById('buscarUniversidad').value = u.nombre;
+            document.getElementById('sugerencias').style.display = 'none';
+            document.getElementById('pctGrado').textContent = `(${u.g}%)`;
+            document.getElementById('pctExamen').textContent = `(${u.e}%)`;
+            document.getElementById('badgeGrado').textContent = `Grado ${u.g}%`;
+            document.getElementById('badgeExamen').textContent = `Examen ${u.e}%`;
+            document.getElementById('uniNombre').textContent = u.nombre;
+            document.getElementById('resultado').style.display = 'none';
+        }
+
+        // ── Calcular ──────────────────────────────────────────────────────
         function calcularPuntaje() {
-            // Obtener valores
             const notaGrado = document.getElementById('notaGrado').value;
             const aciertosExamen = document.getElementById('aciertosExamen').value;
 
-            // Ocultar mensajes previos
             document.getElementById('resultado').style.display = 'none';
             document.getElementById('error').style.display = 'none';
 
-            // Validar que los campos no estén vacíos
             if (!notaGrado || !aciertosExamen) {
                 mostrarError('Por favor, completa ambos campos');
                 return;
             }
 
-            // Convertir a números
             let notaGradoNum = parseFloat(notaGrado);
             const puntajeExamen = parseFloat(aciertosExamen);
 
-            // Validar rangos
             if (puntajeExamen < 0 || puntajeExamen > 1000) {
                 mostrarError('El puntaje del examen debe estar entre 0 y 1000');
                 return;
             }
 
-            // Convertir nota del grado si es necesario
             if (notaGradoNum >= 0 && notaGradoNum <= 10) {
-                // Si es del 0 al 10, convertir a centenas
                 notaGradoNum = notaGradoNum * 100;
             } else if (notaGradoNum < 0 || notaGradoNum > 1000) {
                 mostrarError('La nota del grado debe ser del 0 al 10, o entre 0 y 1000');
                 return;
             }
 
-            // Calcular puntaje total
-            const puntajeTotal = Math.round((notaGradoNum + puntajeExamen) / 2);
+            const puntajeTotal = Math.round(notaGradoNum * pesoGrado + puntajeExamen * pesoExamen);
 
-            // Mostrar resultado con animación
             document.getElementById('puntajeTotal').textContent = puntajeTotal;
             document.getElementById('resultado').style.display = 'block';
 
-            // Mensaje motivacional según el puntaje
             const mensajeDiv = document.getElementById('mensaje').querySelector('p');
             if (puntajeTotal >= 900) {
                 mensajeDiv.innerHTML = '🎉 ¡Excelente! Tienes un puntaje muy competitivo';
@@ -675,25 +781,17 @@
                 mensajeDiv.style.color = '#fbbf24';
             }
 
-            // Scroll suave al resultado
             document.getElementById('resultado').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         function mostrarError(mensaje) {
             document.getElementById('errorMensaje').textContent = mensaje;
             document.getElementById('error').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('error').style.display = 'none';
-            }, 4000);
+            setTimeout(() => { document.getElementById('error').style.display = 'none'; }, 4000);
         }
 
-        // Permitir calcular con Enter
-        document.getElementById('notaGrado').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') calcularPuntaje();
-        });
-        document.getElementById('aciertosExamen').addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') calcularPuntaje();
-        });
+        document.getElementById('notaGrado').addEventListener('keypress', e => { if (e.key === 'Enter') calcularPuntaje(); });
+        document.getElementById('aciertosExamen').addEventListener('keypress', e => { if (e.key === 'Enter') calcularPuntaje(); });
     </script>
     <!-- Sección de Universidades - Carrusel Animado -->
     <section class="section-light" style="overflow: hidden;">
@@ -1001,15 +1099,15 @@
                 </p>
             </div>
 
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
                 <!-- Aptitud numérica -->
                 <div class="card-white reveal"
                     style="border-left: 5px solid var(--color-cyan); transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="calculator-outline"
                             style="font-size: 3rem; color: var(--color-cyan);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Aptitud Numérica</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Aptitud Numérica</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Evaluación de habilidades para trabajar con números,
                         hacer cálculos y resolver problemas aritméticos y matemáticos básicos.</p>
@@ -1021,7 +1119,8 @@
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="chatbubbles-outline"
                             style="font-size: 3rem; color: var(--color-brand-blue);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Aptitud Verbal</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Aptitud Verbal</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Comprensión lectora, analogías, sinónimos y antónimos.
                         Mide tu capacidad para entender y analizar textos escritos.</p>
@@ -1032,7 +1131,8 @@
                     style="border-left: 5px solid var(--color-yellow); transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="eye-outline" style="font-size: 3rem; color: var(--color-yellow);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Atención y Concentración</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Atención y Concentración</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Capacidad para mantener el foco, detectar detalles y
                         procesar información visual de manera precisa bajo presión de tiempo.</p>
@@ -1043,7 +1143,8 @@
                     style="border-left: 5px solid var(--color-cyan); transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="shapes-outline" style="font-size: 3rem; color: var(--color-cyan);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Razonamiento Abstracto</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Razonamiento Abstracto</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Habilidad para identificar patrones, completar series
                         de figuras y resolver problemas mediante lógica visual y simbólica.</p>
@@ -1055,7 +1156,8 @@
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="git-branch-outline"
                             style="font-size: 3rem; color: var(--color-brand-blue);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Razonamiento Lógico</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Razonamiento Lógico</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Deducción, inferencia y conclusiones lógicas. Evalúa tu
                         capacidad para resolver problemas mediante el pensamiento crítico.</p>
@@ -1066,7 +1168,8 @@
                     style="border-left: 5px solid var(--color-yellow); transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="cube-outline" style="font-size: 3rem; color: var(--color-yellow);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Razonamiento Espacial</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Razonamiento Espacial</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Visualización mental de objetos 3D, rotaciones y
                         transformaciones. Fundamental para carreras de ingeniería y arquitectura.</p>
@@ -1077,7 +1180,8 @@
                     style="border-left: 5px solid var(--color-cyan); transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="settings-outline" style="font-size: 3rem; color: var(--color-cyan);"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Razonamiento Mecánico</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Razonamiento Mecánico</h3>
                     </div>
                     <p style="color: #475569; line-height: 1.6;">Comprensión de principios físicos básicos, fuerzas,
                         palancas y mecanismos. Esencial para áreas técnicas y científicas.</p>
@@ -1088,9 +1192,11 @@
                     style="border-left: 5px solid #00CED1; transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="book-outline" style="font-size: 3rem; color: #00CED1;"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Conocimientos</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Conocimientos</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.6;">Dominio de conceptos fundamentales del bachillerato.</p>
+                    <p style="color: #475569; line-height: 1.6;">Dominio de conceptos fundamentales del bachillerato.
+                    </p>
                 </div>
 
                 <!-- Física -->
@@ -1098,9 +1204,11 @@
                     style="border-left: 5px solid #FF4444; transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="flash-outline" style="font-size: 3rem; color: #FF4444;"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Física</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Física</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.6;">Leyes físicas, mecánica, energía y aplicaciones prácticas.</p>
+                    <p style="color: #475569; line-height: 1.6;">Leyes físicas, mecánica, energía y aplicaciones
+                        prácticas.</p>
                 </div>
 
                 <!-- Matemáticas -->
@@ -1108,9 +1216,11 @@
                     style="border-left: 5px solid #0044CC; transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="calculator-outline" style="font-size: 3rem; color: #0044CC;"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Matemáticas</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Matemáticas</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.6;">Álgebra, geometría, trigonometría y cálculo avanzado.</p>
+                    <p style="color: #475569; line-height: 1.6;">Álgebra, geometría, trigonometría y cálculo avanzado.
+                    </p>
                 </div>
 
                 <!-- Química -->
@@ -1118,9 +1228,11 @@
                     style="border-left: 5px solid #059669; transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="flask-outline" style="font-size: 3rem; color: #059669;"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Química</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Química</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.6;">Compuestos, reacciones químicas y estructura de la materia.</p>
+                    <p style="color: #475569; line-height: 1.6;">Compuestos, reacciones químicas y estructura de la
+                        materia.</p>
                 </div>
 
                 <!-- Biología -->
@@ -1128,9 +1240,11 @@
                     style="border-left: 5px solid #10B981; transition: transform 0.3s; padding: 25px;">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <ion-icon name="leaf-outline" style="font-size: 3rem; color: #10B981;"></ion-icon>
-                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">Biología</h3>
+                        <h3 style="color: var(--color-brand-blue); margin: 0; font-size: 0.95rem; line-height: 1.2;">
+                            Biología</h3>
                     </div>
-                    <p style="color: #475569; line-height: 1.6;">Sistemas biológicos, genética, ecología y ciencias de la vida.</p>
+                    <p style="color: #475569; line-height: 1.6;">Sistemas biológicos, genética, ecología y ciencias de
+                        la vida.</p>
                 </div>
             </div>
 
@@ -1202,7 +1316,8 @@
                     <h2 class="stat-number" data-target="950" data-format="plus"
                         style="font-size: 3rem; color: var(--color-brand-blue); margin-bottom: 10px;">950+</h2>
                     <p style="font-weight: 600; color: #002060;">PUNTUACIÓN PROMEDIO</p>
-                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">En el examen Viceministerio de Educación</p>
+                    <p style="font-size: 0.9rem; color: #64748b; margin-top: 5px;">En el examen Viceministerio de
+                        Educación</p>
                 </div>
                 <div class="card-white reveal shadow-premium">
                     <h2 class="stat-number" data-target="500" data-format="plus"
@@ -1214,28 +1329,35 @@
 
             <!-- Perfiles de Estudiantes Destacados -->
             <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: center;">
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; text-align: center; align-items: start;">
+
                 <!-- Estudiante 1: David Alarcón -->
                 <div class="card-white reveal shadow-premium"
-                    style="border-top: 5px solid #002060; padding: 30px 25px; transition: transform 0.3s;">
+                    style="border-top: 5px solid #002060; padding: 30px 25px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
                     <div style="margin-bottom: 20px;">
                         <img src="img/student_david_alarcon.jpg" alt="David Alarcón"
                             style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center 30%; border: 4px solid #002060; box-shadow: 0 8px 20px rgba(0,32,96,0.3);">
                     </div>
-                    <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.3rem;">DAVID ALARCÓN</h3>
+                    <h3 style="color: #002060; margin-bottom: 4px; font-size: 1.3rem;">DAVID ALARCÓN</h3>
+                    <div
+                        style="min-height: 90px; display: flex; align-items: center; justify-content: center; width: 100%;">
+                        <p
+                            style="font-size: 0.82rem; color: #0066CC; font-weight: 600; margin: 0; letter-spacing: 0.3px;">
+                            Odontología · UNACH</p>
+                    </div>
                     <div
                         style="background: linear-gradient(135deg, #002060, #0066CC); padding: 8px 18px; border-radius: 25px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 6px;">
                         <p style="color: white; font-weight: 700; margin: 0; font-size: 0.9rem;">📍 RIOBAMBA</p>
                     </div>
                     <div
-                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px;">
+                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px; width: 100%;">
                         <p
                             style="font-size: 2.5rem; font-weight: 900; color: var(--color-brand-blue); margin: 0; line-height: 1;">
                             75</p>
                         <p style="font-size: 0.85rem; color: #64748b; margin: 5px 0 0 0;">DE 80 PUNTOS</p>
                     </div>
                     <p
-                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6;">
+                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6; margin: 0;">
                         "El nivel de exigencia de PREUFUNDEL es lo que marca la diferencia. Los simulacros semanales me
                         prepararon perfectamente."
                     </p>
@@ -1243,51 +1365,88 @@
 
                 <!-- Estudiante 2: Kevin Llumitasig -->
                 <div class="card-white reveal shadow-premium"
-                    style="border-top: 5px solid #c2410c; padding: 30px 25px; transition: transform 0.3s;">
+                    style="border-top: 5px solid #c2410c; padding: 30px 25px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
                     <div style="margin-bottom: 20px;">
                         <img src="img/student_02.jpg" alt="Kevin Llumitasig"
-                            style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top; border: 4px solid #c2410c; box-shadow: 0 8px 20px rgba(194,65,12,0.3);">
+                            style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center top; border: 4px solid #c2410c; box-shadow: 0 8px 20px rgba(194,65,12,0.3);">
                     </div>
-                    <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.3rem;">KEVIN LLUMITASIG</h3>
+                    <h3 style="color: #002060; margin-bottom: 4px; font-size: 1.3rem;">KEVIN LLUMITASIG</h3>
+                    <div
+                        style="min-height: 90px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 5px; margin-bottom: 0; width: 100%;">
+                        <span
+                            style="background: #fef3c7; color: #92400e; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">ESPE
+                            · Automotriz</span>
+                        <span
+                            style="background: #fee2e2; color: #991b1b; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">EPN
+                            · Mecánica</span>
+                        <span
+                            style="background: #dcfce7; color: #166534; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">UCE
+                            · Medicina</span>
+                        <span
+                            style="background: #ede9fe; color: #5b21b6; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">IKIAM
+                            · Biotecnología</span>
+                    </div>
                     <div
                         style="background: linear-gradient(135deg, #c2410c, #ea580c); padding: 8px 18px; border-radius: 25px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 6px;">
                         <p style="color: white; font-weight: 700; margin: 0; font-size: 0.9rem;">📍 LATACUNGA</p>
                     </div>
                     <div
-                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px;">
+                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px; width: 100%;">
                         <p
                             style="font-size: 2.5rem; font-weight: 900; color: var(--color-brand-blue); margin: 0; line-height: 1;">
                             46</p>
                         <p style="font-size: 0.85rem; color: #64748b; margin: 5px 0 0 0;">DE 50 PUNTOS</p>
                     </div>
                     <p
-                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6;">
+                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6; margin: 0;">
                         "La metodología RUGE y el acompañamiento de los docentes fueron fundamentales. Ingresé a mi
                         primera opción gracias a PREUFUNDEL."
                     </p>
                 </div>
 
-                <!-- Estudiante 3: Helen Guamán -->
+                <!-- Estudiante 3: Victoria Paredes -->
                 <div class="card-white reveal shadow-premium"
-                    style="border-top: 5px solid #059669; padding: 30px 25px; transition: transform 0.3s;">
+                    style="border-top: 5px solid #059669; padding: 30px 25px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
                     <div style="margin-bottom: 20px;">
-                        <img src="img/student_helen_guaman.jpg" alt="Helen Guamán"
-                            style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: top; border: 4px solid #059669; box-shadow: 0 8px 20px rgba(5,150,105,0.3);">
+                        <div
+                            style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; margin: 0 auto; border: 4px solid #059669; box-shadow: 0 8px 20px rgba(5,150,105,0.3); background-image: url('img/victoria_paredes.png'); background-size: 190%; background-position: center 8%; background-repeat: no-repeat;">
+                        </div>
                     </div>
-                    <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.3rem;">HELEN GUAMÁN</h3>
+                    <h3 style="color: #002060; margin-bottom: 4px; font-size: 1.3rem;">VICTORIA PAREDES</h3>
+                    <div
+                        style="min-height: 90px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center; gap: 5px; margin-bottom: 0; width: 100%;">
+                        <span
+                            style="background: #d1fae5; color: #065f46; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">Yachay
+                            Tech · Biomedicina</span>
+                        <span
+                            style="background: #fef3c7; color: #92400e; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">UTA
+                            · Trabajo Social</span>
+                        <span
+                            style="background: #fee2e2; color: #991b1b; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">ESPE
+                            · Economía</span>
+                        <span
+                            style="background: #dbeafe; color: #1e40af; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">UNACH
+                            · Psicopedagogía</span>
+                        <span
+                            style="background: #ede9fe; color: #5b21b6; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">UEA
+                            · Ing. Química</span>
+                        <span
+                            style="background: #ecfccb; color: #3f6212; font-size: 0.72rem; font-weight: 700; padding: 2px 8px; border-radius: 20px;">UEB
+                            · Gest. de Riesgos</span>
+                    </div>
                     <div
                         style="background: linear-gradient(135deg, #059669, #10b981); padding: 8px 18px; border-radius: 25px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 6px;">
                         <p style="color: white; font-weight: 700; margin: 0; font-size: 0.9rem;">📍 PUYO</p>
                     </div>
                     <div
-                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px;">
+                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px; width: 100%;">
                         <p
                             style="font-size: 2.5rem; font-weight: 900; color: var(--color-brand-blue); margin: 0; line-height: 1;">
-                            960</p>
-                        <p style="font-size: 0.85rem; color: #64748b; margin: 5px 0 0 0;">DE 1000 PUNTOS</p>
+                            43</p>
+                        <p style="font-size: 0.85rem; color: #64748b; margin: 5px 0 0 0;">DE 50 PUNTOS</p>
                     </div>
                     <p
-                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6;">
+                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6; margin: 0;">
                         "Los docentes de PREUFUNDEL están altamente preparados. El material de estudio y las técnicas
                         que enseñan son invaluables."
                     </p>
@@ -1295,26 +1454,32 @@
 
                 <!-- Estudiante 4: Javier Vinueza -->
                 <div class="card-white reveal shadow-premium"
-                    style="border-top: 5px solid #7c3aed; padding: 30px 25px; transition: transform 0.3s;">
+                    style="border-top: 5px solid #7c3aed; padding: 30px 25px; transition: transform 0.3s; display: flex; flex-direction: column; align-items: center;">
                     <div
-                        style="margin-bottom: 20px; width: 120px; height: 120px; border-radius: 50%; border: 4px solid #7c3aed; box-shadow: 0 8px 20px rgba(124,58,237,0.3); overflow: hidden; margin-left: auto; margin-right: auto; background: white;">
+                        style="margin-bottom: 20px; width: 120px; height: 120px; border-radius: 50%; border: 4px solid #7c3aed; box-shadow: 0 8px 20px rgba(124,58,237,0.3); overflow: hidden; background: white;">
                         <img src="img/student_javier_vinueza_v2.png" alt="Javier Vinueza"
-                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transform: scale(1);">
+                            style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%;">
                     </div>
-                    <h3 style="color: #002060; margin-bottom: 10px; font-size: 1.3rem;">JAVIER VINUEZA</h3>
+                    <h3 style="color: #002060; margin-bottom: 4px; font-size: 1.3rem;">JAVIER VINUEZA</h3>
+                    <div
+                        style="min-height: 90px; display: flex; align-items: center; justify-content: center; width: 100%;">
+                        <p
+                            style="font-size: 0.82rem; color: #7c3aed; font-weight: 600; margin: 0; letter-spacing: 0.3px;">
+                            Nutrición y Dietética · UTA</p>
+                    </div>
                     <div
                         style="background: linear-gradient(135deg, #7c3aed, #9333ea); padding: 8px 18px; border-radius: 25px; margin-bottom: 15px; display: inline-flex; align-items: center; gap: 6px;">
                         <p style="color: white; font-weight: 700; margin: 0; font-size: 0.9rem;">📍 AMBATO</p>
                     </div>
                     <div
-                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px;">
+                        style="background: rgba(0,206,209,0.1); padding: 15px; border-radius: 12px; margin-bottom: 15px; width: 100%;">
                         <p
                             style="font-size: 2.5rem; font-weight: 900; color: var(--color-brand-blue); margin: 0; line-height: 1;">
                             915</p>
                         <p style="font-size: 0.85rem; color: #64748b; margin: 5px 0 0 0;">DE 1000 PUNTOS</p>
                     </div>
                     <p
-                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6;">
+                        style="font-size: 0.9rem; color: #475569; font-style: italic; text-align: left; line-height: 1.6; margin: 0;">
                         "Gracias a la preparación integral que recibí, no solo logré mi meta sino que superé mis propias
                         expectativas. ¡100% recomendado!"
                     </p>
@@ -1398,45 +1563,61 @@
                 Contamos con 6 sedes estratégicamente ubicadas en la región Sierra y Amazónica del Ecuador
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 30px;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 30px;">
                 <!-- FILA 1: Ambato 1, Ambato 2, Riobamba -->
-                
+
                 <!-- Ambato Sede 1 -->
                 <div class="card-white shadow-premium" style="text-align: left; overflow: hidden; padding: 0;">
                     <div style="position: relative; height: 450px; overflow: hidden; background: #f8fafc;">
-                        <img src="img/ambato_principal_flyer_2026.png.jpeg" alt="Sede Ambato 1" style="width: 100%; height: 100%; object-fit: contain; background: white;">
-                        <div style="position: absolute; top: 15px; left: 15px; background: var(--color-brand-blue); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">AMBATO 1</div>
+                        <img src="img/ambato_principal_flyer_2026.png.jpeg" alt="Sede Ambato 1"
+                            style="width: 100%; height: 100%; object-fit: contain; background: white;">
+                        <div
+                            style="position: absolute; top: 15px; left: 15px; background: var(--color-brand-blue); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            AMBATO 1</div>
                     </div>
                     <div style="padding: 20px;">
                         <h3 style="color: #002060; margin-bottom: 5px; font-size: 1.2rem;">Ambato - Sede Principal</h3>
-                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Av. Quiz Quiz y Av. Atahualpa (Redondel Atahualpa)</p>
-                        <p style="color: #475569; font-size: 0.9rem;">Nuestra sede central con tecnología de punta para tu preparación.</p>
+                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Av. Quiz Quiz y Av.
+                            Atahualpa (Redondel Atahualpa)</p>
+                        <p style="color: #475569; font-size: 0.9rem;">Nuestra sede central con tecnología de punta para
+                            tu preparación.</p>
                     </div>
                 </div>
 
                 <!-- Ambato Sede 2 -->
                 <div class="card-white shadow-premium" style="text-align: left; overflow: hidden; padding: 0;">
                     <div style="position: relative; height: 450px; overflow: hidden; background: #f8fafc;">
-                        <img src="img/ambato_sede_2_flyer.png" alt="Sede Ambato 2" style="width: 100%; height: 100%; object-fit: contain; background: white;">
-                        <div style="position: absolute; top: 15px; left: 15px; background: var(--color-brand-blue); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">AMBATO 2</div>
+                        <img src="img/ambato_sede_2_flyer.png" alt="Sede Ambato 2"
+                            style="width: 100%; height: 100%; object-fit: contain; background: white;">
+                        <div
+                            style="position: absolute; top: 15px; left: 15px; background: var(--color-brand-blue); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            AMBATO 2</div>
                     </div>
                     <div style="padding: 20px;">
                         <h3 style="color: #002060; margin-bottom: 5px; font-size: 1.2rem;">Ambato - Sede Norte</h3>
-                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Av. Atahualpa y Av. Rumiñahui</p>
-                        <p style="color: #475569; font-size: 0.9rem;">Ampliación moderna para mayor comodidad de nuestros estudiantes.</p>
+                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Av. Atahualpa y Av.
+                            Rumiñahui</p>
+                        <p style="color: #475569; font-size: 0.9rem;">Ampliación moderna para mayor comodidad de
+                            nuestros estudiantes.</p>
                     </div>
                 </div>
 
                 <!-- Riobamba -->
                 <div class="card-white shadow-premium" style="text-align: left; overflow: hidden; padding: 0;">
                     <div style="position: relative; height: 450px; overflow: hidden; background: #f8fafc;">
-                        <img src="img/riobamba_sede_flyer.png" alt="Sede Riobamba" style="width: 100%; height: 100%; object-fit: contain; background: white;">
-                        <div style="position: absolute; top: 15px; left: 15px; background: var(--color-yellow); color: #002060; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">RIOBAMBA</div>
+                        <img src="img/riobamba_sede_flyer.png" alt="Sede Riobamba"
+                            style="width: 100%; height: 100%; object-fit: contain; background: white;">
+                        <div
+                            style="position: absolute; top: 15px; left: 15px; background: var(--color-yellow); color: #002060; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            RIOBAMBA</div>
                     </div>
                     <div style="padding: 20px;">
                         <h3 style="color: #002060; margin-bottom: 5px; font-size: 1.2rem;">Riobamba</h3>
-                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Av. José Veloz y Carlos Zambrano</p>
-                        <p style="color: #475569; font-size: 0.9rem;">Líderes en preparación universitaria en la provincia de Chimborazo.</p>
+                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Av. José Veloz y Carlos
+                            Zambrano</p>
+                        <p style="color: #475569; font-size: 0.9rem;">Líderes en preparación universitaria en la
+                            provincia de Chimborazo.</p>
                     </div>
                 </div>
             </div>
@@ -1447,39 +1628,54 @@
                 <!-- Latacunga Sede 1 -->
                 <div class="card-white shadow-premium" style="text-align: left; overflow: hidden; padding: 0;">
                     <div style="position: relative; height: 450px; overflow: hidden; background: #f8fafc;">
-                        <img src="img/latacunga_sede_1_flyer.jpg" alt="Sede Latacunga 1" style="width: 100%; height: 100%; object-fit: contain; background: white;">
-                        <div style="position: absolute; top: 15px; left: 15px; background: var(--color-cyan); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">LATACUNGA 1</div>
+                        <img src="img/latacunga_sede_1_flyer.jpg" alt="Sede Latacunga 1"
+                            style="width: 100%; height: 100%; object-fit: contain; background: white;">
+                        <div
+                            style="position: absolute; top: 15px; left: 15px; background: var(--color-cyan); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            LATACUNGA 1</div>
                     </div>
                     <div style="padding: 20px;">
                         <h3 style="color: #002060; margin-bottom: 5px; font-size: 1.2rem;">Latacunga - Sede 1</h3>
-                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Belisario Quevedo y Av. Rumiñahui</p>
-                        <p style="color: #475569; font-size: 0.9rem;">Cerca de todo, con la infraestructura que necesitas para triunfar.</p>
+                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Belisario Quevedo y Av.
+                            Rumiñahui</p>
+                        <p style="color: #475569; font-size: 0.9rem;">Cerca de todo, con la infraestructura que
+                            necesitas para triunfar.</p>
                     </div>
                 </div>
 
                 <!-- Latacunga Sede 2 -->
                 <div class="card-white shadow-premium" style="text-align: left; overflow: hidden; padding: 0;">
                     <div style="position: relative; height: 450px; overflow: hidden; background: #f8fafc;">
-                        <img src="img/latacunga_sede_2_flyer.png" alt="Sede Latacunga 2" style="width: 100%; height: 100%; object-fit: contain; background: white;">
-                        <div style="position: absolute; top: 15px; left: 15px; background: var(--color-cyan); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">LATACUNGA 2</div>
+                        <img src="img/latacunga_sede_2_flyer.png" alt="Sede Latacunga 2"
+                            style="width: 100%; height: 100%; object-fit: contain; background: white;">
+                        <div
+                            style="position: absolute; top: 15px; left: 15px; background: var(--color-cyan); color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            LATACUNGA 2</div>
                     </div>
                     <div style="padding: 20px;">
                         <h3 style="color: #002060; margin-bottom: 5px; font-size: 1.2rem;">Latacunga - Sede 2</h3>
-                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Marco Aurelio Subía y Benjamín Carrión Mora</p>
-                        <p style="color: #475569; font-size: 0.9rem;">Ambientes amplios y seguros para tu formación académica.</p>
+                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Marco Aurelio Subía y
+                            Benjamín Carrión Mora</p>
+                        <p style="color: #475569; font-size: 0.9rem;">Ambientes amplios y seguros para tu formación
+                            académica.</p>
                     </div>
                 </div>
 
                 <!-- Puyo -->
                 <div class="card-white shadow-premium" style="text-align: left; overflow: hidden; padding: 0;">
                     <div style="position: relative; height: 450px; overflow: hidden; background: #f8fafc;">
-                        <img src="img/puyo_sede_flyer.jpg" alt="Sede Puyo" style="width: 100%; height: 100%; object-fit: contain; background: white;">
-                        <div style="position: absolute; top: 15px; left: 15px; background: #059669; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">PUYO</div>
+                        <img src="img/puyo_sede_flyer.jpg" alt="Sede Puyo"
+                            style="width: 100%; height: 100%; object-fit: contain; background: white;">
+                        <div
+                            style="position: absolute; top: 15px; left: 15px; background: #059669; color: white; padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">
+                            PUYO</div>
                     </div>
                     <div style="padding: 20px;">
                         <h3 style="color: #002060; margin-bottom: 5px; font-size: 1.2rem;">Puyo - Sede Amazónica</h3>
-                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Ceslao Marín sector la "Y"</p>
-                        <p style="color: #475569; font-size: 0.9rem;">La mejor preparación preuniversitaria del Puyo y la Amazonía.</p>
+                        <p style="color: #64748b; font-size: 0.85rem; margin-bottom: 10px;">📌 Ceslao Marín sector la
+                            "Y"</p>
+                        <p style="color: #475569; font-size: 0.9rem;">La mejor preparación preuniversitaria del Puyo y
+                            la Amazonía.</p>
                     </div>
                 </div>
             </div>
